@@ -1,0 +1,13 @@
+<div class="stories-listing">
+    <div class="left">
+        <% if component.image_uid.present? %>
+        <img alt="Story" src="<%= component.image.thumb('117x117#').url %>">
+        <% end %>
+    </div>
+    <div class="right">
+        <h4><%= component.title %></h4>
+        <p><%= component.summary %></p>
+        <%= cms_link_to(component.link_text, [component, :link], class: 'read-story') rescue "" %>
+    </div>
+</div>
+

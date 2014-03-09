@@ -1,0 +1,55 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 14.0 MIMEDIR//EN
+VERSION:2.0
+METHOD:PUBLISH
+X-MS-OLK-FORCEINSPECTOROPEN:TRUE
+BEGIN:VTIMEZONE
+TZID:Eastern Standard Time
+BEGIN:STANDARD
+DTSTART:16011104T020000
+RRULE:FREQ=YEARLY;BYDAY=1SU;BYMONTH=11
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:16010311T020000
+RRULE:FREQ=YEARLY;BYDAY=2SU;BYMONTH=3
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20120518T143912Z
+DESCRIPTION:Join MaxPoint on Thursday\, May 24th at 5:30 pm in Minneapolis\
+	, MN for the i612 May Social Event. Held at the Solera Restaurant and Even
+	t Center\, attendees will come together to network and share insights on t
+	he development of the interactive advertising industry in the Minneapolis-
+	Saint Paul metro area. We hope to see you there!\n
+DTEND;TZID="Eastern Standard Time":20120524T213000
+DTSTAMP:20120504T160700Z
+DTSTART;TZID="Eastern Standard Time":20120524T173000
+LAST-MODIFIED:20120518T143912Z
+LOCATION:Solera Restaurant 
+PRIORITY:5
+SEQUENCE:0
+SUMMARY;LANGUAGE=en-us:i612 - May 24\, 2012 
+TRANSP:OPAQUE
+UID:040000008200E00074C5B7101A82E00800000000409BE9C1EE29CD01000000000000000
+	010000000E2B17405DD59AE49968B838FB6D2B299
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//E
+	N">\n<HTML>\n<HEAD>\n<META NAME="Generator" CONTENT="MS Exchange Server ve
+	rsion 08.01.0240.003">\n<TITLE></TITLE>\n</HEAD>\n<BODY>\n<!-- Converted f
+	rom text/rtf format -->\n\n<P DIR=LTR><SPAN LANG="en-us"></SPAN><SPAN LANG
+	="en-us"></SPAN><SPAN LANG="en-us"><FONT FACE="Arial">Join MaxPoint on Thu
+	rsday\, May 24th at 5:30 pm in Minneapolis\, MN for the i612 May Social Ev
+	ent. Held at the Solera Restaurant and Event Center\, attendees will come 
+	together to network and share insights on the development of the interacti
+	ve advertising industry in the Minneapolis-Saint Paul metro area. We hope 
+	to see you there!</FONT></SPAN><SPAN LANG="en-us"></SPAN><SPAN LANG="en-us
+	"></SPAN><SPAN LANG="en-us"></SPAN></P>\n\n</BODY>\n</HTML>
+X-MICROSOFT-CDO-BUSYSTATUS:BUSY
+X-MICROSOFT-CDO-IMPORTANCE:1
+X-MS-OLK-AUTOFILLLOCATION:FALSE
+END:VEVENT
+END:VCALENDAR

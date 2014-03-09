@@ -1,0 +1,571 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name = "viewport" content = "width=device-width, minimum-scale=1, maximum-scale=1" />
+    <meta name = "apple-mobile-web-app-capable" content = "yes" />
+    <title>Digital Advertising Solutions | MaxPoint</title>
+    <!-- CSS -->
+    <link rel = "stylesheet" href = "/css/default.css" />
+    <link rel = "stylesheet" media = "screen" href = "/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="/css/menu.css" />
+    <link href="/css/maxpoint.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <!--[if IE]><script src="/js/html5.js"></script><![endif]-->
+
+
+    <!-- jQuery library -->
+    <script type="text/javascript" src = "/js/jquery-1.4.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.easing-1.3.js"></script>
+    <!-- iosSlider plugin -->
+    <script src="/js/jquery.iosslider.js"></script>
+    <script type="text/javascript">
+        function resizePage(){
+            var height = ($('.video-container').width()*.333)+'px';
+            $('.video-container').css('height', height);
+            var imgLeft = (($('.noslider').width() - $('.noslider img').width())/2.0)+'px';
+            $('.noslider img').css('left', imgLeft);
+        }
+        $(document).ready(function() {
+            //slides the element with class "menu_body" when paragraph with class "menu_head" is clicked
+            $("#firstpane p.menu_head").click(function() {
+                if($("#firstpane p").attr('alt')=="minus") {
+                    $("#firstpane p").attr('alt', '');
+                    $(this).css({backgroundImage:"url(images/plus.png)"}).next("div.menu_body").slideToggle(300).siblings("div.menu_body").slideUp("slow");
+                    $(this).siblings().css({backgroundImage:"url(images/plus.png)"});
+                } else {
+                    $("#firstpane p").attr('alt', 'minus');
+                    $(this).css({backgroundImage:"url(images/minus.png)"}).next("div.menu_body").slideToggle(300).siblings("div.menu_body").slideUp("slow");
+                    $(this).siblings().css({backgroundImage:"url(images/minus.png)"});
+                }
+            });
+            //slides the element with class "menu_body" when mouse is over the paragraph
+            $("#secondpane p.menu_head").mouseover(function() {
+                $(this).css({backgroundImage:"url(images/minus.png)"}).next("div.menu_body").slideDown(500).siblings("div.menu_body").slideUp("slow");
+                $(this).siblings().css({backgroundImage:"url(images/minus.png)"});
+            });
+            $('.iosSlider').iosSlider({
+                desktopClickDrag: true,
+                snapToChildren: true,
+                navSlideSelector: '.sliderContainer .slideSelectors .item',
+                onSlideComplete: slideComplete,
+                onSliderLoaded: sliderLoaded,
+                onSlideChange: slideChange,
+                autoSlide: true,
+                scrollbar: true,
+                scrollbarContainer: '.sliderContainer .scrollbarContainer',
+                scrollbarMargin: '0',
+                scrollbarBorderRadius: '0'
+            });
+            $('.video-container').mouseover(
+                    function() {
+                        $('#btn_hover').show(0);
+                    }
+            ).mouseout( function(){
+                        $('#btn_hover').hide(0);
+                    });
+            window.onresize = function (){
+                resizePage();
+            };
+        });
+        function slideChange(args) {
+
+            $('.sliderContainer .slideSelectors .item').removeClass('selected');
+            $('.sliderContainer .slideSelectors .item:eq(' + (args.currentSlideNumber-1) + ')').addClass('selected');
+            try {
+                console.log(args);
+            } catch(err) {
+            }
+        }
+
+        function slideComplete(args) {
+
+            $(args.sliderObject).find('.text1, .text2').attr('style', '');
+
+            $(args.currentSlideObject).find('.text1').animate({
+                right: '100px',
+                opacity: '0.8'
+            }, 400, 'easeOutQuint');
+
+            $(args.currentSlideObject).find('.text2').delay(200).animate({
+                right: '50px',
+                opacity: '0.8'
+            }, 400, 'easeOutQuint');
+
+        }
+
+        function sliderLoaded(args) {
+
+            slideComplete(args);
+
+            slideChange(args);
+
+        }
+    </script>
+
+    <!-- dropdown menu strats here -->
+    <script type='text/javascript' src='/js/jquery.hoverIntent.minified.js'></script>
+    <script type='text/javascript' src='/js/jquery.dcmegamenu.1.2.js'></script>
+    <script type="text/javascript">
+        $(document).ready(function($){
+            $('#mega-menu-tut').dcMegaMenu({
+                rowItems: '5',
+                speed: 'fast'
+            });
+        });
+    </script>
+    <!-- dropdown menu close here -->
+
+
+    <!-- country dropdown -->
+    <script type="text/javascript" src="/js/jquery.dd.js"></script>
+    <script type="text/javascript">
+        function showvalue(arg) {
+            alert(arg);
+            //arg.visible(false);
+        }
+        $(document).ready(function() {
+            try {
+                //$("body select").msDropDown();
+                $("#websites1").msDropDown({useSprite:'sprite'})
+                $("#ver").html($.msDropDown.version);
+            } catch(e) {
+                alert("Error: "+e.message);
+            }
+        })
+    </script>
+    <!-- //country dropdown -->
+
+    <!-- dropdown menu strats here -->
+
+    <script type="text/javascript" src="/js/jquery.jcarousel.min.js"></script>
+    <script type="text/javascript">
+        function mycarousel_initCallback(carousel)
+        {
+            // Disable autoscrolling if the user clicks the prev or next button.
+            carousel.buttonNext.bind('click', function() {
+                carousel.startAuto(0);
+            });
+
+            carousel.buttonPrev.bind('click', function() {
+                carousel.startAuto(0);
+            });
+
+            // Pause autoscrolling if the user moves with the cursor over the clip.
+            carousel.clip.hover(function() {
+                carousel.stopAuto();
+            }, function() {
+                carousel.startAuto();
+            });
+        };
+
+        jQuery(document).ready(function() {
+            jQuery('#mycarousel').jcarousel({
+                auto: 2,
+                wrap: 'last',
+                initCallback: mycarousel_initCallback
+            });
+        });
+
+    </script>
+    <!-- dropdown menu close here -->
+</head>
+<body onload="resizePage()">
+<div class="top-streep">
+    <div class="wrapper">
+
+        <header>
+            <h1 id="logo"><a href="/us/"><img src="/images/logo.jpg" alt=""/></a></h1>
+            <div class="top_right">
+                <ul>
+                    <li><a href="/us/contact-us">Contact</a></li>
+                    <li>
+                        <select name="websites1" id="websites1">
+                            <option>Country Selector</option>
+                            <option>United States</option>
+                        </select>
+                    </li>
+                </ul>
+            </div>
+            <div class="width80">
+                <div class="search_part">
+                    <div class="search_icon"> <a href="#"><img src="/images/search_icon.jpg" alt="" title=""  /> </a></div>
+                    <input name="" type="text" class="field" />
+                </div>
+                <div class="dcjq-mega-menu">
+                    <ul id="mega-menu-tut" class="menu">
+                        <li class="solutions"><a href="/us/digital-advertising-solutions">Solutions</a>
+                            <ul class="main_bg">
+                                <li id="menu-item-1">
+                                    <ul>
+                                        <li><a href="/us/digital-advertising-solutions/foot-traffic">Foot Traffic</a></li>
+                                        <li><a href="/us/digital-advertising-solutions/targeted-awareness">Targeted Awareness</a></li>
+                                        <li><a href="/us/digital-advertising-solutions/advertising-new-products">Product Launches</a></li>
+                                    </ul>
+                                </li>
+                                <li id="menu-item-2">
+                                    <ul>
+                                        <li><a href="/us/digital-advertising-solutions/digital-campaigns-for-new-store-openings">Store Openings</a></li>
+                                        <li><a href="/us/digital-advertising-solutions/event-advertising">Event Promotions</a></li>
+                                    </ul>
+                                </li>
+                                <li id="menu-item-3">
+                                    <ul>
+                                        <li><img src="/images/menu_item1.jpg" height="200" width="137" alt="" title=""/></a></li>
+                                    </ul>
+                                </li>
+                                <li id="menu-item-4">
+                                    <ul>
+                                        <li><a href="/us/digital-advertising-solutions/digital-advertising-case-studies">Success Stories</a></li>
+                                        <li>
+                                            <p>See how our solutions bring results. </p>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="industries"><a href="/us/online-advertising-by-industry">Industries</a>
+                            <ul class="main_bg">
+                                <li id="menu-item-1">
+                                    <ul>
+                                        <li><a href="/us/retail-advertising">Retail</a></li>
+                                        <li><a href="/us/consumer-product-advertising">Consumer Products</a></li>
+                                        <li><a href="/us/automotive-advertising">Automotive</a></li>
+                                    </ul>
+                                </li>
+                                <li id="menu-item-2">
+                                    <ul>
+                                        <li><a href="/us/restaurant-advertising">Restaurants</a></li>
+                                        <li><a href="/us/health-care-advertising">Health Care</a></li>
+                                        <li><a href="/us/entertainment-advertising">Entertainment</a></li>
+                                    </ul>
+                                </li>
+                                <li id="menu-item-3">
+                                    <ul>
+                                        <li><img src="/images/menu_item1.jpg" height="200" width="137" alt="" title=""/></a></li>
+                                    </ul>
+                                </li>
+                                <li id="menu-item-4">
+                                    <ul>
+                                        <li><a href="/us/digital-advertising-solutions/digital-advertising-case-studies">Success Stories</a></li>
+                                        <li>
+                                            <p>See how our solutions bring results.</p>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="knowledge"><a href="/us/advertising-tips-and-strategies">Knowledge</a>
+                            <ul class="main_bg">
+                                <li id="menu-item-1">
+                                    <ul>
+                                    </ul>
+                                </li>
+                                <li id="menu-item-2">
+                                    <ul>
+                                        <li><a href="/us/digital-advertising-company/onpoint-blog">Blog</a></li>
+                                        <li><a href="/us/advertising-tips-and-strategies/advertising-insights">Advertising Insights</a></li>
+                                        <li><a href="/us/advertising-tips-and-strategies/advertising-guides-and-reports">Guides and Reports</a></li>
+                                    </ul>
+                                </li>
+                                <li id="menu-item-3">
+                                    <ul>
+                                        <li><img src="/images/menu_item1.jpg" height="200" width="137" alt="" title=""/></a></li>
+                                    </ul>
+                                </li>
+                                <li id="menu-item-4">
+                                    <ul>
+                                        <li><a href="/us/digital-advertising-solutions/digital-advertising-case-studies">Success Stories</a></li>
+                                        <li>
+                                            <p>See how our solutions bring results.</p>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- menu close here -->
+
+            </div>
+        </header>
+        <div class="clear"></div>
+    </div>
+</div>
+<div class="online_bg">DIGITAL ADVERTISING SOLUTIONS</div>
+
+
+<div class="noslider noslider">
+    <img src="/media/W1siZiIsIjIwMTMvMDUvMDkvMTFfMDdfMzBfMjAwX21wX1NvbHV0aW9uc19sYW5kXzIxOC5qcGciXSxbInAiLCJ0aHVtYiIsIjEyMDB4NDUyIyJdXQ/mp_Solutions-land_218.jpg" align="Campaign Solutions" class="slider-fix-img">
+    <div class="nortext"><span class="top-txt">Finally, Every Neighborhood Is Within Reach</span></div>
+</div>
+
+
+<div class="content_bg pdtop55">
+    <div class="wrapper">
+        <div class="content">
+            <p class="content-top">Our proprietary Digital Zip® technology layers offline and
+                online data sources to help you build your brand, increase market share, and,
+                ultimately, lift your in-store sales.&nbsp;</p>
+            <div class="content_inner">
+                <div class="system_icon" style="background-image: url(/images/bulletpoint_icons/sales.png);">Lift in-store sales at retail locations.</div>
+
+                <div class="system_icon" style="background-image: url(/images/bulletpoint_icons/newproductlaunch.png);">Promote new products.</div>
+
+                <div class="system_icon" style="background-image: url(/images/bulletpoint_icons/foottraffic.png);">Drive traffic to your newly opened stores.</div>
+
+                <div class="system_icon" style="background-image: url(/images/bulletpoint_icons/eventpromotions.png);">Boost attendance at brand events. </div>
+
+                <div class="system_icon" style="background-image: url(/images/bulletpoint_icons/shelfspace.png);">Gain market share.</div>
+
+                <div class="system_icon" style="background-image: url(/images/bulletpoint_icons/awareness.png);">Generate targeted awareness.</div>
+
+                <p class="bottom76 color_black">Every challenge requires a unique solution. That’s why we’ve
+                    developed specific digital advertising solutions for different goals and
+                    industries.&nbsp;</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="content_bg pdtop55">
+    <div class="wrapper">
+        <div class="content">
+            <div class="content_inner">
+                <h1 class="bottom30">What Is Hyperlocal Advertising?</h1>
+                <p class="bottom15">Hyperlocal advertising (n):<br />
+                    <span>Advertising targeted at neighborhood shoppers via local media sources, usually with a limited scale.</span></p>
+                <p class="bottom76">MaxPoint hyperlocal advertising (n):<br />
+                    <span>Advertising that goes beyond local media sources to target shoppers in precisely defined Digital Zip neighborhoods. This gives MaxPoint the ability to reach crowds of ideal shoppers while still retaining the precision of a hyperlocal campaign.  </span></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content_bg pdtop55">
+    <div class="wrapper">
+        <div class="solution_part effect-container">
+            <ul class="nospace">
+                <li>
+                    <a href="/us/digital-advertising-solutions/foot-traffic">
+                        <img class="img-style row4" src="/media/W1siZiIsIjIwMTMvMDUvMTYvMTBfMTZfMDFfNzQ2X21wQnRuX1NvbHV0aW9uc19mb290VHJhZmZpY19wdXJwbGUuanBnIl0sWyJwIiwidGh1bWIiLCIzMDZ4MzA2IyJdXQ/mpBtn_Solutions_footTraffic-purple.jpg" alt="" title=""  />
+        <span class="description_part middle">
+            <h4>Foot Traffic</h4>
+            <div class="description mrtop_20"></div>
+        </span>
+                        <div class="description_link bottom-fix"><a href="/us/digital-advertising-solutions/foot-traffic">Learn More</a></div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/us/digital-advertising-solutions/targeted-awareness">
+                        <img class="img-style row4" src="/media/W1siZiIsIjIwMTMvMDUvMTYvMTBfMTZfMDFfODAzX21wQnRuX1NvbHV0aW9uc190YXJnZXRBd2FyZV95ZWxsb3cuanBnIl0sWyJwIiwidGh1bWIiLCIzMDZ4MzA2IyJdXQ/mpBtn_Solutions_targetAware-yellow.jpg" alt="" title=""  />
+        <span class="description_part middle">
+            <h4>Targeted Awareness</h4>
+            <div class="description mrtop_20"></div>
+        </span>
+                        <div class="description_link bottom-fix"><a href="/us/digital-advertising-solutions/targeted-awareness">Learn More</a></div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/us/digital-advertising-solutions/advertising-new-products">
+                        <img class="img-style row4" src="/media/W1siZiIsIjIwMTMvMDUvMTYvMTBfMTZfMDFfODA5X21wQnRuX1NvbHV0aW9uc19Qcm9kdWN0TGF1bmNoX2JsdWUuanBnIl0sWyJwIiwidGh1bWIiLCIzMDZ4MzA2IyJdXQ/mpBtn_Solutions_ProductLaunch-blue.jpg" alt="" title=""  />
+        <span class="description_part middle">
+            <h4>Product Launches</h4>
+            <div class="description mrtop_20"></div>
+        </span>
+                        <div class="description_link bottom-fix"><a href="/us/digital-advertising-solutions/advertising-new-products">Learn More</a></div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/us/digital-advertising-solutions/digital-campaigns-for-new-store-openings">
+                        <img class="img-style row4" src="/media/W1siZiIsIjIwMTMvMDUvMTYvMTBfMTdfMjhfNjIyX21wQnRuX1NvbHV0aW9uc19TdG9yZU9wZW5pbmdfcmVkLmpwZyJdLFsicCIsInRodW1iIiwiMzA2eDMwNiMiXV0/mpBtn_Solutions_StoreOpening-red.jpg" alt="" title=""  />
+        <span class="description_part middle">
+            <h4>Store Openings</h4>
+            <div class="description mrtop_20"></div>
+        </span>
+                        <div class="description_link bottom-fix"><a href="/us/digital-advertising-solutions/digital-campaigns-for-new-store-openings">Learn More</a></div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/us/digital-advertising-company/advertising-events">
+                        <img class="img-style row4" src="/media/W1siZiIsIjIwMTMvMDUvMTYvMTBfMTdfMjhfNjU4X21wQnRuX1NvbHV0aW9uc19FdmVudFByb21vdGVfZ3JheS5qcGciXSxbInAiLCJ0aHVtYiIsIjMwNngzMDYjIl1d/mpBtn_Solutions_EventPromote-gray.jpg" alt="" title=""  />
+        <span class="description_part middle">
+            <h4>Event Promotions </h4>
+            <div class="description mrtop_20"></div>
+        </span>
+                        <div class="description_link bottom-fix"><a href="/us/digital-advertising-company/advertising-events">Learn More</a></div>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+
+<div class="white_bg margintop10">
+    <div class="wrapper">
+        <div class="sucess_stories">
+            <img src="/media/W1siZiIsIjIwMTMvMDUvMTAvMTFfNDdfMjhfNzY5X1BpbmsuanBnIl0sWyJwIiwidGh1bWIiLCI0NTZ4MzU1IyJdXQ/Pink.jpg" alt="" title=""  />
+            <div class="sucess_right">
+                <p>
+                    SUCCESS STORIES
+                    <span>As a data-driven company, we know that ad campaigns are successful only when they bring results.</span>
+                </p>
+
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+
+<div class="video">
+    <div class="wrapper">
+        <div class="video-container">
+            <img src="../../images/howWeWork.jpg" style="position: absolute;width:100%">
+            <div id="video_text_overlay" style="position: absolute">
+                <h1>HOW WE WORK</h1>
+                <p>How does MaxPoint find the right customers in the right neighborhoods?<br>
+                    Watch our short video to find out.<p>
+            </div>
+            <div id="video_play_btn">
+                <img src="../../images/playbtn.png">
+                <img src="../../images/playbtn_hover.png" id="btn_hover" style="display: none">
+            </div>
+            <div id="player" style="position: absolute;overflow: hidden;height: 333px; z-index: 9999; background-color: #000;width: 100%;left: 0">
+                <!--<iframe width="596" height="335" src="http://www.youtube.com/embed/1WXi_dWEh3k" frameborder="0" allowfullscreen></iframe>-->
+            </div>
+            <script src="https://www.youtube.com/iframe_api"></script>
+            <script>
+                var player,
+                        theight = ($('.video-container').width() * 0.333);
+
+                function onYouTubeIframeAPIReady() {
+                    player = new YT.Player('player', {
+                        height: theight,
+                        width: (theight*1.78),
+                        videoId: '1WXi_dWEh3k',
+                        events: {
+                            'onReady': onPlayerReady,
+                            'onStateChange': onPlayerStateChange
+                        }
+                    });
+                }
+                function playVideo() {
+                    player.playVideo();
+                }
+                function onPlayerReady(event) {
+                    $('#player').hide();
+                }
+                var done = true;
+                function onPlayerStateChange(event) {
+/*                    if (event.data == YT.PlayerState.PLAYING && !done) {
+                        setTimeout(stopVideo, 6000);
+                        done = true;
+                    }
+*/                }
+                function stopVideo() {
+                    player.stopVideo();
+                }
+            </script>
+        </div>
+    </div>
+</div>
+
+<div class="bottom_contact">
+    <div class="wrapper">
+        <div class="see_work">SEE HOW MAXPOINT CAN WORK FOR YOU. <strong>CONTACT US</strong>.</div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+
+
+
+<div class="footer_bg">
+    <div class="wrapper">
+        <div class="subcribe_part">
+            <div class="width_subcribe">
+                <h3>SUBSCRIBE <br />
+            <span>
+              Get the latest hyperlocal tips and tricks delivered to your inbox.
+            </span>
+                </h3>
+            </div>
+            <div class="width20">
+                <input name="" type="text" class="email" value="Enter your email here" />
+                <input name="" type="button" class="button submit" value="submit" />
+            </div>
+            <div class="social_part">
+                <a href="https://www.facebook.com/pages/MaxPoint-Interactive/275921092465603"><img src="/images/fb.png" alt="" title=""  /></a>
+                <a href="https://twitter.com/maxpoint_int"><img src="/images/twitt.png" alt="" title=""  /></a>
+                <a href="http://www.linkedin.com/company/maxpoint"><img src="/images/in.png" alt="" title=""  /></a>
+                <a href="http://www.youtube.com/maxpointinteractive"><img src="/images/youtube.png" alt="" title=""  /></a>
+            </div>
+        </div>
+
+        <div class="search_part footer-search">
+            <div class="search_icon"> <a href="#"><img src="/images/search_icon.jpg" alt="" title=""  /> </a></div>
+            <input name="" type="text" class="field" />
+        </div>
+        <div id="footer_links">
+            <div class="col-1">
+                <h2>Navigate</h2>
+                <ul>
+                    <li><a href="/us/digital-advertising-solutions">Solutions</a></li>
+                    <li><a href="/us/online-advertising-by-industry">Industries</a></li>
+                    <li><a href="/us/advertising-tips-and-strategies">Knowledge</a></li>
+                </ul>
+            </div>
+            <div class="col-2">
+                <h2>ABOUT MAXPOINT</h2>
+                <ul>
+                    <li><a href="/us/digital-advertising-company">Overview</a></li>
+                </ul>
+                <ul>
+                    <li><a href="/us/digital-advertising-company/online-advertising-careers">Working at MaxPoint</a></li>
+                </ul>
+                <ul>
+                    <li><a href="/us/digital-advertising-company/advertising-events">Events</a></li>
+                </ul>
+                <ul>
+                    <li><a href="/us/contact-us">Contact</a></li>
+                </ul>
+                <ul>
+                    <li><a href="/us/privacy-policy">Privacy</a></li>
+                </ul>
+            </div>
+            <div class="col-3">
+                <h2>Media</h2>
+                <ul>
+                    <li><a href="/us/digital-advertising-company/online-advertising-news">Follow MaxPoint in the news.</a></li>
+                </ul>
+                <h2 class="mrtop10"><a href="/us/digital-advertising-company/online-advertising-news">SEE MORE</a></h2>
+            </div>
+            <div class="col-4">
+                <h2>blog</h2>
+                <p>Drive your hyperlocal advertising results even higher with tips from our OnPoint blog.</p>
+                <h2><a href="/us/digital-advertising-company/onpoint-blog">READ MORE</a></h2>
+            </div>
+            <div class="copyright">&copy; 2013 MaxPoint Interactive, Inc.</div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    $('#video_play_btn').click(function (){
+        $('#player').show();
+        playVideo();
+    })
+</script>
+</html>

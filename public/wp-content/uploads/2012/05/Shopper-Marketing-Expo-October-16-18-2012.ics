@@ -1,0 +1,57 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 14.0 MIMEDIR//EN
+VERSION:2.0
+METHOD:PUBLISH
+X-MS-OLK-FORCEINSPECTOROPEN:TRUE
+BEGIN:VTIMEZONE
+TZID:Eastern Standard Time
+BEGIN:STANDARD
+DTSTART:16011104T020000
+RRULE:FREQ=YEARLY;BYDAY=1SU;BYMONTH=11
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:16010311T020000
+RRULE:FREQ=YEARLY;BYDAY=2SU;BYMONTH=3
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20120531T145217Z
+DESCRIPTION:Join MaxPoint for breakfast in Rogers\, AR for the next Doing B
+	usiness in Bentonville event. Aimed to help industry professionals keep on
+	 top of this ever-changing evolution in tactical business knowledge\, the 
+	event’s speaker will provide unique and actionable insights that will in
+	crease knowledge of all things retail. Please check back for more details 
+	on the event speaker. Breakfast begins at 7am.\n
+DTEND;TZID="Eastern Standard Time":20121018T233000
+DTSTAMP:20120529T142600Z
+DTSTART;TZID="Eastern Standard Time":20121016T000000
+LAST-MODIFIED:20120531T145217Z
+PRIORITY:5
+SEQUENCE:0
+SUMMARY;LANGUAGE=en-us:Shopper Marketing Expo - October 16-18\, 2012
+TRANSP:OPAQUE
+UID:040000008200E00074C5B7101A82E0080000000040E0F2EB853DCD01000000000000000
+	010000000BDA6873593048C4AA4C0F54516B0BC7D
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//E
+	N">\n<HTML>\n<HEAD>\n<META NAME="Generator" CONTENT="MS Exchange Server ve
+	rsion 08.01.0240.003">\n<TITLE></TITLE>\n</HEAD>\n<BODY>\n<!-- Converted f
+	rom text/rtf format -->\n\n<P DIR=LTR><SPAN LANG="en-us"></SPAN><SPAN LANG
+	="en-us"></SPAN><SPAN LANG="en-us"><FONT FACE="Arial">Join MaxPoint in the
+	 windy city at the Navy Pier on Tuesday\, October 16\, 2012 for the annual
+	 Shopper Marketing Expo. Retail is changing quickly\, and shopper marketin
+	g continues to influence go-to-market strategies and industry best practic
+	es. The Shopper Marketing Expo is dedicated to integrating a wide variety 
+	of solutions\, tools and expertise needed to influence decision-making alo
+	ng the entire path to purchase. Will you be among the thousands of industr
+	y professionals who attend?</FONT></SPAN><SPAN LANG="en-us"></SPAN><SPAN L
+	ANG="en-us"></SPAN><SPAN LANG="en-us"></SPAN></P>\n\n</BODY>\n</HTML>
+X-MICROSOFT-CDO-BUSYSTATUS:BUSY
+X-MICROSOFT-CDO-IMPORTANCE:1
+X-MS-OLK-AUTOFILLLOCATION:TRUE
+END:VEVENT
+END:VCALENDAR

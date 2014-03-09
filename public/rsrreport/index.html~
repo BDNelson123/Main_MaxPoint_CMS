@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="pragma" content="no-cache" />
+<meta name="Content-Language" content="en" />
+<title>MPI_RSR-LandingPage_r8</title>
+<link rel="stylesheet" type="text/css" href="styles/global.css" />
+</head>
+
+<body>
+	<div id="wrapper">
+    	<div id="header">
+          <a href="http://www.maxpointinteractive.com"><img src="images/logo.gif" alt="" /></a>
+        </div><!--Header End-->
+
+	<!--
+	   Start of DoubleClick Floodlight Tag: Please do not remove
+	   Activity name of this tag: MaxPoint RSR - Shopper Marketing
+	   URL of the webpage where the tag is expected to be placed: http://www.maxpointinteractive.com/shoppermarketing
+	   This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+	   Creation Date: 09/21/2011
+	  -->
+	<script type="text/javascript">
+          if(document.location.search == "?RdFSM") {
+          var axel = Math.random() + "";
+          var a = axel * 10000000000000;
+          document.write('<iframe src="http://fls.doubleclick.net/activityi;src=3168822;type=maxpo773;cat=maxpo630;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+          }
+	  else
+	  {
+	  var axel = Math.random() + "";
+          var a = axel * 10000000000000;
+          document.write('<iframe src="http://fls.doubleclick.net/activityi;src=3168822;type=maxpo773;cat=maxpo368;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+	  }
+	</script>
+	<noscript>
+	  <iframe src="http://fls.doubleclick.net/activityi;src=3168822;type=maxpo773;cat=maxpo630;ord=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>
+	</noscript>
+	
+	<!-- End of DoubleClick Floodlight Tag: Please do not remove -->
+
+	<script type="text/javascript">
+	  
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-1645146-1"]);
+          _gaq.push(["_trackPageview"]);
+	  
+          (function() {
+          var ga = document.createElement("script"); ga.type = "text/javascript"; ga.async = true;
+          ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+          var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+	
+        <div id="content">
+        	<div id="contentInner">
+            	<div class="banner">
+                	<span class="note">Groundbreaking research study provides a detailed look into the localized advertising efforts of the nation's top retailers.</span>
+                    <div class="sideBox">
+                    	<h3>RSR Report</h3>
+                        <span class="btnDown"><a target="_blank" href="pdf/The State of Localized Advertising in Retail_RSR Research.docx.pdf" onclick="_gaq.push(['_trackEvent', 'Download', 'RSRPDF']);"><img src="images/btn_down.png" alt="Download Now" /></a></span>
+                        <p class="downText">This is an instant download,<br />you won't be asked<br />for any contact information.</p>
+                        <span class="website"><a href="http://maxpointinteractive.com">maxpointinteractive.com</a></span>
+                        <span class="twitter"><a href="http://twitter.com/#!/maxpoint_int"><img src="images/icon_t.png" alt="Twitter" />Follow us on Twitter@ maxpoint_int</a></span>
+                    </div>
+                </div><!--Banner End-->
+                <div class="mainBox">
+                	<h1>A research report from Retail Systems Research</h1>
+                    <p>Find the examples and insights critical to building your localized advertising roadmap. <strong>The Local Approach: The State of Localized Advertising in Retail</strong> is an evaluation of how retailers use digital experiences to drive local store traffic. </p>
+                    <h2>This independent report will provide an in-depth examination of:</h2>
+                    <ul class="listInfo clear">
+                    	<li>Traditional Advertising</li>
+                    	<li>Alternative Offers</li>
+                    	<li>Digital Advertising</li>
+                    	<li>Website Communication</li>
+                    </ul>
+                    <h2>Covering the following retail verticals:</h2>
+                    <ul class="listInfo clear">
+                    	<li>Department/Clothing Stores</li>
+                    	<li>Electronics</li>
+                    	<li>Sporting Goods</li>
+                    	<li>Casual Dining</li>
+                    </ul>
+                    <p>Now is the time to improve the use of digital advertising to drive local store sales. Download this Retail Systems Research independent report to get tactics to boost local retail sales.</p>
+                </div><!--mainBox End-->
+            </div>
+        </div><!--Content End-->
+        <div id="footer">
+        	<span class="copy">Copyright &copy; 2011 MaxPoint Interactive</span>
+            <span class="learnMore"><a href="http://www.maxpointinteractive.com">Click here to learn more about MaxPoint Interactive</a></span>
+        </div>
+    </div>
+</body>
+</html>

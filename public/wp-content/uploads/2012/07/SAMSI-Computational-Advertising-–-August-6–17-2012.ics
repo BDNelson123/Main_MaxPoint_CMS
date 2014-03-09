@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Apple Inc.//iCal 5.0.3//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+TRANSP:TRANSPARENT
+DTEND;VALUE=DATE:20120818
+UID:487C1805-F22F-42D9-B89E-0EE81A25AC45
+DTSTAMP:20120727T185833Z
+LOCATION:Research Triangle Park\, North Carolina
+DESCRIPTION:Join us for this two-week program organized by the Statistic
+ al and Applied Mathematical Sciences Institute (SAMSI) in cooperation wi
+ th the Society for Industrial and Applied Mathematics (SIAM) and the SIA
+ M Activity Group on Data Mining and Analytics (SIAG/DMA). Held in Resear
+ ch Triangle Park\, North Carolina\, the program includes MaxPoint Intera
+ ctive’s session on current challenges in online advertising\, poster ses
+ sions\, and a group problem-solving event.
+URL;VALUE=URI:http://www.samsi.info/workshop/computational-advertising-a
+ ugust-6-17-2012
+SEQUENCE:6
+SUMMARY:SAMSI Computational Advertising – August 6–17\, 2012
+DTSTART;VALUE=DATE:20120806
+CREATED:20120727T185726Z
+END:VEVENT
+END:VCALENDAR

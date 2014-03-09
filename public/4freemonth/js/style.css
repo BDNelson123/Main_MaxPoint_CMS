@@ -1,0 +1,2097 @@
+/*
+Theme Name: MaxPoint Interactive
+Theme URI: http://www.revered-design.com/
+Author: REVERED
+Author URI: http://www.revered-design.com/
+Description: A custom designed theme built exclusively for MaxPoint Interactive by REVERED Design.
+Version: 1.0
+
+*/
+
+/*
+* Colors:
+* Text grey/gray: #3e4545
+* Link blue/green: #106470
+* Red: #9c3022
+*/
+
+* {
+	outline: 0;
+}
+
+body {
+	background: #f7f7f7;
+	color: #3e4545;
+	font-size: 12px;
+	font-family: "Arial", Tahoma, sans-serif;
+}
+
+strong {
+	font-weight: bold;
+}
+
+a {
+	color: #106470;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+p.last-child {
+	margin-bottom: 0 !important;
+}
+
+small {
+	font-size: 10px;
+	font-style: italic;
+}
+
+sup {
+	font-size: 8px;
+}
+
+ol li {
+	margin: 20px;
+	list-style-type: decimal;
+}
+
+div#wrapper {
+	width: 950px;
+	margin: 0 auto;
+}
+
+div.feature.insights h2 {
+    color: #9C3022;
+    font-size: 16px;
+    margin: 15px 0 5px;
+}
+
+div#ribbon {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 159px;
+	height: 97px;
+	background: url('assets/images/header-ribbon.png') no-repeat transparent;
+	text-indent: -9999px;
+}
+
+div#ribbon a {
+	position: absolute;
+	width: 108px;
+	height: 69px;
+	right: 0;
+	top: 0;
+	text-indent: -9999px;
+}
+
+div#header {
+	width: 950px;
+	height: 100px;
+	float: left;
+}
+
+div#header h1 {
+	width: 160px;
+	height: 60px;
+	background: url('assets/images/maxpoint-logo.png') no-repeat transparent;
+	text-indent: -9999px;
+	float: left;
+	margin: 25px 0 0 0;
+}
+
+div#header h1 a {
+	width: 160px;
+	height: 60px;
+	display: block;
+}
+
+div#header div.menu-primary-navigation-container {
+	float: right;
+	position: relative;
+	z-index: 9999;
+}
+
+div#header ul.nav-pri {
+	margin: 35px 146px 0 0;
+}
+
+div#header ul.nav-pri li {
+	float: left;
+	font-size: 12px;
+	margin: 0 0 0 19px;
+}
+
+div#header ul.nav-pri li a {
+	text-decoration: none;
+	color: #3e4545;
+	font-weight: normal;
+}
+
+div#header ul.nav-pri li a:hover {
+	color: #106470;
+	text-decoration: none;
+}
+
+body#company li#menu-item-23 a,
+body#single-insight li#menu-item-26 a,
+body#blog li#menu-item-25 a,
+div#header ul.nav-pri li.current-menu-item a {
+	color: #9c3022;
+	font-weight: bold;
+}
+
+div#header div.search {
+	width: 300px;
+	float: right;
+	margin: 15px 120px 0 0;
+}
+
+div#header div.search input[type="text"] {
+	border: 1px solid #dcdcde;
+	width: 208px;
+	margin: 0 10px 0 0;
+	float: left;
+}
+
+div#header div.search input[type="submit"] {
+	width: 55px;
+	background: #dcdcde;
+	border: 1px solid #dcdcde;
+	padding: 1px 10px;
+	font-size: 10px;
+	display: block;
+	float: left;
+}
+
+div#header div.search input[type="submit"]:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+div#sidebar {
+	width: 230px;
+	float: left;
+	margin: 25px 25px 0 0;
+}
+
+div#sidebar div.widget {
+	behavior: url('/PIE.htc');
+	min-width: 228px;
+	margin: 0 0 10px 0;
+	float: left;
+}
+
+div#sidebar div.widget div.title {
+	behavior: url('/PIE.htc');
+	padding: 5px 10px 5px 10px;
+	min-height: 20px;
+	width: 210px;
+	float: left;
+	background: #9c3022;
+	-webkit-border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+	border-radius: 5px 5px 0 0;
+	background: -webkit-gradient(
+	    linear,
+	    left bottom,
+	    left top,
+	    color-stop(0.3, #7E2218),
+	    color-stop(0.65, #9C3022)
+	);
+	background: -moz-linear-gradient(
+	    center bottom,
+	    #7E2218 30%,
+	    #9C3022 65%
+	);
+	background: linear-gradient(#7E2218, #9C3022);
+	-pie-background: linear-gradient(#7E2218, #9C3022);
+}
+
+div#sidebar div.widget.subnav div.title {
+	border-right: 1px solid #CCC;
+	border-top: 1px solid #CCC;
+	border-left: 1px solid #CCC;
+}
+
+div#sidebar div.widget.grey div.title {
+	background-image: -webkit-gradient(
+	    linear,
+	    left bottom,
+	    left top,
+	    color-stop(0.3, #576365),
+	    color-stop(0.65, #717f81)
+	);
+	background-image: -moz-linear-gradient(
+	    center bottom,
+	    #576365 30%,
+	    #717f81 65%
+	);
+	background: linear-gradient(#576365, #717f81);
+	-pie-background: linear-gradient(#576365, #717f81);
+	behavior: url(PIE.htc);
+}
+
+div#sidebar div.widget div.title h2 {
+	behavior: url('/PIE.htc');
+	color: #FFF;
+	font-size: 17px;
+	min-height: 18px;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+div#sidebar div.widget div.title h2 a {
+	display: block;
+	color: #FFF;
+	outline: 0;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+div#sidebar div.widget div.title h2 a:hover {
+	text-decoration: underline;
+}
+
+div#sidebar div.widget.widget_twitter {
+	min-height: 200px;
+}
+
+div#sidebar div.widget.widget_twitter div.title h2 {
+	background: url('assets/images/widget-title-twitter-icon.png') no-repeat right center transparent;
+}
+
+div#sidebar div.widget.widget_ps_recent_posts div.title h2 {
+	background: url('assets/images/widget-title-rss-icon-red.png') no-repeat right center transparent;
+}
+
+div#sidebar div.widget.widget_ps_recent_posts img {
+	float: left;
+	margin: 0 5px 5px 0;
+}
+
+div#sidebar div.widget.widget_ps_recent_posts p.more {
+	font-size: 11px;
+}
+
+div#sidebar div.widget.widget_ps_recent_posts h3 {
+	font-weight: bold;
+	margin: 0 0 15px 0;
+	line-height: 16px;
+}
+
+div#sidebar div.widget.widget_twitter p.more {
+	font-size: 11px;
+}
+
+div#sidebar div.widget.widget_twitter ul li {
+	margin: 0 0 20px 0;
+	line-height: 16px;
+}
+
+div#sidebar div.widget.widget_text div.textwidget h2 {
+	color: #9C3022;
+    font-size: 16px;
+    margin: 0 0 10px 0;
+}
+
+div#sidebar div.widget.widget_text div.textwidget div.contact {
+	color: #9c3022;
+	width: 208px;
+}
+
+div#sidebar div.widget.widget_text.featured_job {
+	background: #C4C7C8;
+}
+
+div#sidebar div.widget.widget_text.featured_job h2 {
+	font-size: 16px;
+	padding: 10px;
+	color: #9c3022;
+}
+
+div#sidebar div.widget.widget_text div.textwidget div.contact h3 {
+	font-size: 16px;
+	margin: 0 0 20px 0;
+}
+
+div#sidebar div.widget.widget_text div.textwidget div.contact a {
+	font-weight: bold;
+}
+
+div#sidebar div.widget div.body, 
+div#sidebar div.widget div.textwidget, 
+div#sidebar div.widget.widget_twitter ul {
+	behavior: url('/PIE.htc');
+	padding: 10px;
+	float: left;
+	min-width: 208px;
+	background: #FFFFFF;
+	-webkit-border-radius: 0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+	border-radius: 0 0 5px 5px;
+	border: 1px solid #CCC;
+	-webkit-box-shadow: 0 5px 4px -3px #CCC;
+	-moz-box-shadow: 0 5px 4px -3px #CCC;
+	box-shadow: 0 5px 4px -3px #CCC;
+}
+
+div#sidebar div.widget p {
+	line-height: 16px;
+	margin: 0 0 10px 0;
+}
+
+div#sidebar div.widget p.tweet {
+	margin: 0;
+}
+
+div#sidebar div.ataglist div.title h2,
+div#sidebar div.Authors div.title h2,
+div#sidebar div.widget_archive div.title h2 {
+	background: url('assets/images/widget-title-inactive.png') transparent no-repeat left center;
+	padding: 0 0 0 20px;
+}
+
+div#sidebar div.ataglist.active div.title h2,
+div#sidebar div.Authors.active div.title h2,
+div#sidebar div.widget_archive.active div.title h2 {
+	background: url('assets/images/widget-title-active.png') transparent no-repeat left center;
+}
+
+div#sidebar div.ataglist ul,
+div#sidebar div.Authors ul,
+div#sidebar div.widget_archive ul {
+	display: none;
+}
+
+div#sidebar div.ataglist.active ul,
+div#sidebar div.Authors.active ul,
+div#sidebar div.widget_archive.active ul {
+	display: block;
+	behavior: url('/PIE.htc');
+	background: #FFFFFF;
+	float: left;
+	-webkit-border-radius: 0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+	border-radius: 0 0 5px 5px;
+	border-right: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+	border-left: 1px solid #CCC;
+	-webkit-box-shadow: 0 5px 4px -3px #CCC;
+	-moz-box-shadow: 0 5px 4px -3px #CCC;
+	box-shadow: 0 5px 4px -3px #CCC;
+}
+
+div#sidebar div.ataglist div.title,
+div#sidebar div.Authors div.title,
+div#sidebar div.widget_archive div.title {
+	behavior: url('/PIE.htc');
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+div#sidebar div.ataglist.active div.title,
+div#sidebar div.Authors.active div.title,
+div#sidebar div.widget_archive.active div.title {
+	behavior: url('/PIE.htc');
+	-webkit-border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+	border-radius: 5px 5px 0 0;
+}
+
+div#sidebar div.widget.subnav {
+	padding: 0 0 10px 0;
+}
+
+div#sidebar div.widget.subnav ul {
+	behavior: url('/PIE.htc');
+	background: #FFFFFF;
+	float: left;
+	-webkit-border-radius: 0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+	border-radius: 0 0 5px 5px;
+	border-right: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+	border-left: 1px solid #CCC;
+	-webkit-box-shadow: 0 5px 4px -3px #CCC;
+	-moz-box-shadow: 0 5px 4px -3px #CCC;
+	box-shadow: 0 5px 4px -3px #CCC;
+}
+
+div#sidebar div.widget.subnav li a {
+	font-size: 14px;
+	color: #3e4545;
+	padding: 8px 10px 8px 10px;
+	float: left;
+	width: 210px;
+	font-weight: normal;
+}
+
+div#sidebar div.ataglist li a,
+div#sidebar div.Authors li a,
+div#sidebar div.widget_archive li a {
+	padding: 5px 40px;
+	float: left;
+	width: 148px;
+}
+
+div#sidebar div.ataglist li a:hover,
+div#sidebar div.Authors li a:hover,
+div#sidebar div.widget_archive li a:hover {
+	background: #E6E7E7;
+}
+
+div#sidebar div.widget.subnav li a:hover {
+	color: #FFF;
+	font-weight: bold;
+	background: #9C3022;
+}
+
+div#content {
+	margin: 25px 0 0 25px;
+	float: left;
+	width: 670px;
+	position: relative;
+}
+
+div#blog-tools {
+	margin: 0 0 0 0;
+	width: 950px;
+	float: left;
+}
+
+div#blog-tools div.search {
+	width: 300px;
+	float: left;
+}
+
+div#blog-tools div.search input[type="text"] {
+	border: 1px solid #dcdcde;
+	width: 208px;
+	margin: 0 10px 0 0;
+	float: left;
+}
+
+div#blog-tools div.search input[type="submit"] {
+	width: 55px;
+	background: #dcdcde;
+	border: 1px solid #dcdcde;
+	padding: 1px 10px;
+	font-size: 10px;
+	display: block;
+	float: left;
+}
+
+div#blog-tools p.subscribe {
+	float: right;
+}
+
+div#blog-tools p.subscribe a {
+	color: #9c3022;
+	background: url('assets/images/icon-rss-red.png') no-repeat left center;
+	padding: 0 0 0 20px;
+}
+
+div#content div.feature {
+	behavior: url('/PIE.htc');
+	width: 638px;
+	background: #FFFFFF;
+	float: left;
+	border: 1px solid #bcc5c1;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: 0 5px 4px -3px #CCC;
+	-moz-box-shadow: 0 5px 4px -3px #CCC;
+	box-shadow: 0 5px 4px -3px #CCC;
+	padding: 15px 15px;
+	line-height: 16px;
+}
+
+div#content div.feature.video {
+	min-height: 280px;
+}
+div#content div.feature div#headlines {
+	min-height: 260px;
+}
+div#content div.feature div#headlines div.headline {
+	width: 638px !important;
+}
+div#content div.feature div#headlines div.video-thumb {
+	cursor: pointer;
+}
+
+div#content div.feature div.video-widget {
+	float: left;
+	margin: 0 15px 0 0;
+	position: relative;
+}
+
+
+div#content div.feature div.body h2 {
+	font-size: 16px;
+	color: #9c3022;
+	margin: 0 0 25px 0;
+}
+
+div#content div.feature div.body p {
+	margin: 0 0 20px 0;
+	font-size: 12px;
+	line-height: 14px;
+}
+
+div#content div.subfeature {
+	behavior: url('/PIE.htc');
+	width: 328px;
+	min-height: 285px;
+	margin: 10px 0 10px 0;
+	float: left;
+}
+
+div#content div.subfeature.last-child {
+	margin-left: 13px;
+}
+
+div#content div.subfeature div.title {
+	behavior: url('/PIE.htc');
+	padding: 5px 10px 5px 10px;
+	height: 20px;
+	background: #9c3022;
+	-webkit-border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+	border-radius: 5px 5px 0 0;
+	background-image: -webkit-gradient(
+	    linear,
+	    left bottom,
+	    left top,
+	    color-stop(0.3, #576365),
+	    color-stop(0.65, #717f81)
+	);
+	background-image: -moz-linear-gradient(
+	    center bottom,
+	    #576365 30%,
+	    #717f81 65%
+	);
+	background: linear-gradient(#576365, #717f81);
+	-pie-background: linear-gradient(#576365, #717f81);
+	behavior: url(PIE.htc);
+}
+
+div#content div.subfeature div.title h2 {
+	color: #FFF;
+	font-size: 17px;
+	height: 18px;
+}
+
+div#content div.subfeature div.title h2 a {
+	display: block;
+	color: #FFF;
+	outline: 0;
+	font-weight: normal;
+}
+
+div#content div.subfeature.rss div.title h2 a.subfeat-title {
+	float: left;
+}
+
+div#content div.subfeature.rss div.title h2 a.subfeat-image {
+	float: right;
+	display: block;
+	text-indent:-9999px;
+	height: 18px;
+	width: 20px;
+	background: url('assets/images/widget-title-rss-icon.png') no-repeat right center transparent;
+}
+
+div#content div.subfeature div.body {
+	padding: 10px;
+	background: #FFFFFF;
+	-webkit-border-radius: 0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+	border-radius: 0 0 5px 5px;
+	border: 1px solid #CCC;
+	-webkit-box-shadow: 0 5px 4px -3px #CCC;
+	-moz-box-shadow: 0 5px 4px -3px #CCC;
+	box-shadow: 0 5px 4px -3px #CCC;
+	float:left;
+	min-height: 250px;
+}
+
+div#content div.subfeature div.body img {
+	float: left;
+	margin: 0 10px 140px 0;
+}
+
+div#content div.subfeature div.body h3 {
+	font-size: 12px;
+	font-weight: bold;
+	margin: 3px 0 20px 0;
+}
+
+div#content div.subfeature div.body p {
+	line-height: 16px;
+	margin: 0 0 10px 0;
+	min-width: 225px;
+}
+
+a.more {
+	font-size: 11px;
+}
+
+p.more {
+	font-weight: bold;
+}
+
+p.solution-more {
+	text-align: right;
+}
+p.solution-more a {
+	background: url('assets/images/slider-next-active.png') no-repeat transparent right center;
+    padding-right: 20px;
+	color: #106470;
+    display: block;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+div#content div.subfeature p.more.blog,
+div#content div.subfeature p.more.schedule {
+	margin: 10px 0 0 0;
+}
+
+div#content div.subfeature p.more.schedule a {
+	behavior: url('/PIE.htc');
+	color: #FFF;
+	background: #14646F;
+	padding: 3px 30px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	font-size: 12px;
+}
+
+div#footer {
+	width: 950px;
+	height: 125px;
+	float: left;
+	margin: 50px 0 0 0;
+	font-size: 11px;
+}
+
+div#footer div ul li {
+	margin-top: -6px;
+}
+
+div#footer div.copyright {
+	float: left;
+	width: 230px;
+	margin: 0 25px 0 0;
+}
+
+div#footer div.links {
+	width: 330px;
+	float: left;
+	margin: 5px 0 0 20px;
+}
+
+div#footer div.links ul li {
+	float: left;
+	padding: 0 5px 0 5px;
+	border-right: 1px solid #000;
+}
+
+div#footer div.links ul li.last-child {
+	border: 0;
+}
+
+div#footer div.social {
+	width: 210px;
+	margin: 0 0 0 20px;
+	float: right;
+	text-align: left;
+}
+
+div#footer div.social ul {
+	float: right;
+}
+
+div#footer div.social ul li {
+	float: left;
+}
+
+div#footer div.social ul li a {
+	display: block;
+	text-indent: -9999px;
+	margin: 0 3px;
+	width: 16px;
+	height: 16px;
+}
+
+div#footer div.social ul li a.twitter {	background: url('assets/images/footer-twitter-icon.png') no-repeat transparent; }
+div#footer div.social ul li a.linkedin {	background: url('assets/images/footer-linkedin-icon.png') no-repeat transparent; }
+div#footer div.social ul li a.rss {	background: url('assets/images/footer-rss-icon.png') no-repeat transparent; }
+div#footer div.social ul li a.delicious {	background: url('assets/images/footer-delicious-icon.png') no-repeat transparent; }
+div#footer div.social ul li a.email {	background: url('assets/images/footer-email-icon.png') no-repeat transparent; margin: 0 0 0 20px; }
+
+
+/* Solutions Page*/
+div#solution-tabs {
+	float: left;
+	margin: 15px 0 0 0;
+}
+div#solution-tabs ul.tabs {
+	background: url('assets/images/solution-tabs-1.png') no-repeat transparent;
+	width: 671px;
+	height: 50px;
+	float: left;
+	position: relative;
+	top: 10px;
+}
+
+div#solution-tabs ul.tabs li {
+	float: left;
+	text-align: center;
+}
+
+div#solution-tabs ul.tabs li a:hover {
+	text-decoration: underline;
+}
+
+
+
+div#solution-tabs ul.tabs li.first {	width: 230px; }
+div#solution-tabs ul.tabs li.middle { width: 225px; }
+div#solution-tabs ul.tabs li.last {	width: 215px; }
+
+div#solution-tabs ul.tabs li a {
+	font-size: 16px;
+	padding: 8px 0;
+	color: #FFF;
+	font-weight: normal;
+	display: block;
+}
+
+div#solution-tabs ul.tabs li a.active {
+	font-weight: bold;
+}
+
+div.haccordion-container {
+	behavior: url('/PIE.htc');
+	height: 288px;
+	overflow: hidden;
+}
+
+#haccordion {
+	behavior: url('/PIE.htc');
+	list-style: none;
+	padding: 0;
+	height: 285px;
+}
+ 
+#haccordion li {
+	float: left;
+	display: block;
+	padding: 0px 0;
+	width: 40px;
+	overflow: hidden;
+	color: #000;
+	text-decoration: none;
+	font-size: 16px;
+}
+
+#haccordion li#tab-1 {
+	margin-right:8px!important;
+}
+
+#haccordion li#tab-2 div.content h2 {
+	position: absolute!important;
+	top: 50px;
+	left: 420px;
+}
+
+#haccordion li#tab-2 div.content p {
+	position: absolute!important;
+	top: 100px;
+	left: 420px;
+}
+
+#haccordion li img.tab {
+	border: none;
+	border-right: 1px solid #fff;
+	float: left;
+	margin: -15px 0px 0 0;
+}
+ 
+#haccordion li.active {
+	width: 620px;
+	border: 1px solid #707F81;
+	-webkit-border-radius: 0px 5px 5px 0;
+	-moz-border-radius: 0px 5px 5px 0;
+	border-radius: 0px 5px 5px 0;
+	-webkit-box-shadow: 0px 1px 2px 1px #CCC;
+	-moz-box-shadow: 0px 1px 2px 1px #CCC;
+	box-shadow: 0px 1px 2px 1px #CCC;
+	behavior: url('/PIE.htc');
+	background: #FFF;
+}
+
+#haccordion li div.content_wrap {
+	display: block;
+	overflow: hidden;
+	height: 255px;
+	width: 616px;
+	padding: 15px 0;
+}
+
+#haccordion li.active div.content_wrap {
+	height: 253px;
+}
+
+#haccordion li.active img.tab {
+	margin: -15px 0px 0 0;
+}
+
+#haccordion li div.content img {
+	margin: 0px 15px 0 10px;
+	float: left;
+}
+
+#haccordion li div.content {
+	position: relative;
+	top: -5px;
+}
+
+#haccordion li div.content h2 {
+	color: #9c3022;
+	margin: 0 0 10px 0;
+}
+
+#haccordion li div.content p {
+	font-size: 12px;
+	margin: 0 20px 0 0;
+	line-height: 16px;
+}
+
+div#solution-tabs div.panes {
+	background: none;
+	border: none;
+	border-radius: auto;
+	padding: 0;
+}
+
+div#solution-tabs div.panes div.box {
+	height: auto;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #BCC5C1;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 5px 4px -3px #CCCCCC;
+    float: left;
+    line-height: 16px;
+    padding: 15px;
+    width: 638px;
+	margin: 0 0 20px 0;
+}
+
+div#solution-tabs div.panes h2 {
+	font-size: 24px;
+	color: #9c3022;
+	margin: 10px 0 20px 0;
+}
+
+div#solution-tabs div.panes h3 {
+	font-size: 16px;
+	color: #9c3022;
+	margin: 20px 0;	
+}
+
+div#solution-tabs div.panes p {
+	line-height: 16px;
+	margin: 0 0 20px 0;
+}
+
+div#solution-tabs div.panes p.subtitle {
+	font-weight: bold;
+	color: #9c3022;
+	margin: 0 0 10px 0;
+}
+
+div#solution-tabs div.feature ul {
+	margin: 0 0 20px 0;
+}
+
+div#solution-tabs div.panes ul li {
+	padding-left: 10px;
+	background: url('assets/images/red-bullet.png') no-repeat transparent 0px 5px;
+	line-height: 16px;
+}
+
+div#solution-tabs div.panes hr {
+	border-color: #3e4545;
+}
+
+div#solution-tabs div.panes div.insight {
+	width: 190px;
+	float: left;
+}
+
+div#solution-tabs div.panes div.insight.first-child { margin: 0 30px 0 0; }
+div#solution-tabs div.panes div.insight.last-child { margin: 0 0 0 30px; }
+
+div#solution-tabs div.panes div.insight h4 {
+	font-weight: bold;
+}
+
+div#solution-tabs div.panes div.insight p {
+	margin: 0 0 0 0;
+}
+
+div#content div.feature.insights div.insight {
+	margin: 0 0 10px 0;
+	padding: 20px 20px;
+	width: 598px;
+	border-bottom: 3px solid #a5aeb6;
+	float: left;
+}
+div#content div.feature.insights div.insight.first-child {
+	padding: 10px 20px 20px 20px;
+}
+
+div#content div.feature.insights div.insight.last-child {
+	border: 0;
+}
+
+div#content div.feature.insights div.insight h2,
+div#content div.feature.insights div.insight h2 a {
+	font-size: 16px;
+	color: #9c3022;
+	margin: 0px 0 5px 0;
+	float: left;
+	clear: left;
+	font-weight: normal;
+	max-width: 445px;
+	line-height: 24px;
+}
+
+div#content div.feature.insights div.insight p {
+	clear: left;
+	margin: 0 0 5px 0;
+	line-height: 16px;
+}
+
+div#content div.feature.insights div.insight div.thumb {
+	float: right;
+}
+
+div#content div.feature.insights div.insight div.thumb img {
+	width: 150px;
+	height: 104px;
+	behavior: url('/PIE.htc');
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+div#content div.feature#insight-details h3 {
+	font-size: 16px;
+	color: #9c3022;
+	margin: 0 0 20px 0;
+	line-height: 25px;
+}
+
+div#content div.feature#insight-details h4 {
+	font-weight: bold;
+	margin: 0 0 10px 0;
+	color: #9c3022;
+}
+
+div#content div.feature#insight-details blockquote p {
+	font-size: 16px;
+	color: #9c3022;
+	margin: 0 0 20px 0;
+	line-height: 20px;
+}
+
+div#content div.feature#insight-details p.quote-author {
+	font-size: 12px;
+	color: #9c3022;
+	margin: 0 0 20px 0;	
+}
+
+div#content div.feature#insight-details table {
+	width: 270px;
+}
+
+div#content div.feature#insight-details table tr td {
+	padding: 5px 0;
+}
+
+div#content div.feature#insight-details div.enlarge {
+	position: relative;
+	z-index: 100;
+	top: -25px;
+	width: 140px;
+	padding: 5px 10px 0 0;
+	background: #FFF;
+}
+
+div#content div.feature#insight-details div.key {
+	position: relative;
+	top: -10px;
+}
+
+div#content div.feature#insight-details div.key p.title {
+	margin: 0 0 6px 0;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+div#content div.feature#insight-details div.key ul li {
+    font-weight: bold;
+    list-style-type: none;
+    padding: 0 0 10px 20px;
+	font-size: 11px;
+}
+
+div#content div.feature#insight-details div.key ul li.square {
+    background: url("assets/images/key-square.jpg") no-repeat scroll 0 2px transparent;
+    color: #DC291E;
+}
+
+div#content div.feature#insight-details div.key ul li.circle {
+    background: url("assets/images/key-circle.png") no-repeat scroll 0 2px transparent;
+    color: #1E27AC;
+}
+
+div#content div.feature#insight-details table tr td.data {
+	width: 110px;
+	color: #9C3022;
+}
+
+div#content div.feature.events {
+	padding: 20px 50px;
+	width: 568px;
+}
+
+div#content div.feature.events div.event {
+	margin: 0 0 40px 0;
+}
+
+div#content div.feature.events div.event h2 {
+	font-size: 16px;
+	color: #9c3022;
+	margin: 15px 0 5px 0;
+}
+
+div#content div.feature.events div.event p {
+	line-height: 16px;
+}
+
+div#content div.feature.events div.event p {
+	margin: 10px 0;	
+}
+
+div#content div.feature.events div.event p.schedule a {
+	behavior: url('/PIE.htc');
+	color: #FFF;
+	background: #14646F;
+	padding: 3px 30px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;	
+}
+
+div#content div.feature.events div.event div.thumb {
+	float: right;
+	margin: 0 0 10px 10px;
+}
+
+div.single-post,
+div.related-posts {
+	padding: 20px 20px 0 20px;
+	position: relative;
+	float: left;
+}
+
+div.single-post.standard-sub h3 {
+	font-size: 16px;
+	color: #9C3022;
+	margin: 0 0 3px 0;
+}
+
+div.single-post.join-our-team {
+	padding: 0;
+}
+
+div.single-post.join-our-team div.wrap {
+	padding: 20px 20px 0 20px;
+}
+
+div#content div.slider-tweet {
+	float: right;
+}
+
+div#content div.tweet-right a {
+	position: absolute;
+	right: 7px;
+	top: -17px;
+	z-index: 1000;
+}
+
+div#content div.events div.tweet-right a {
+	right: -50px;
+	top: -15px;
+}
+
+div#content div.single-post div.tweet-right a {
+	position: absolute;
+	right: -10px;
+	top: -32px;
+	z-index: 1000;
+}
+
+div.single-post p {
+	margin: 0 0 20px 0;
+	font-size: 12px;
+	line-height: 16px;
+}
+
+div.single-post p.source {
+	font-size: 11px;
+}
+
+div.single-post p.download {
+	clear: both;
+	width: 100%;
+	height: 20px;
+}
+
+div.single-post p.download a#mail {
+	float: left;
+	padding: 3px 0 0 25px;
+	background: url("assets/images/footer-email-icon.png") no-repeat scroll 0 3px transparent;
+}
+
+div.single-post p.download a#download {
+	behavior: url('/PIE.htc');
+	color: #FFF;
+	background: #14646F;
+	padding: 3px 30px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	float: right;
+	margin: 0 0 0 10px;
+}
+
+div.single-post p.author {
+	font-weight: bold;
+}
+
+div.single-post p.subtitle {
+	font-weight: bold;
+	color: #9c3022;
+	margin: 0 0 10px 0;
+}
+
+div.single-post ul {
+	margin: 0 0 20px 0;
+}
+
+div.single-post ul li {
+	padding-left: 10px;
+	background: url('assets/images/red-bullet.png') no-repeat transparent 0px 5px;
+	line-height: 16px;
+}
+
+div.single-post h2 {
+	font-size: 24px;
+	color: #9c3022;
+	margin: 0 0 20px 0;
+	line-height: 28px;	
+}
+
+div.single-post h2.spotlight {
+	max-width: 465px;
+}
+
+div.single-post div.image {
+	float: right;
+	margin: 0 0 10px 10px;
+}
+
+div.single-post div.image.spotlight {
+	float: left;
+	margin: 0 10px 10px 0;
+}
+
+hr {
+	border-color: #3e4545;
+}
+
+div.related-posts h3 {
+	font-size: 16px;
+	color: #9c3022;
+	margin: 20px 0;
+}
+
+div.related-posts div.post {
+	width: 169px;
+	float: left;
+}
+
+div.related-posts div.post img {
+	margin: 0 10px 10px 0;
+	float: left;
+}
+
+div.related-posts div.post.first-child { margin: 0 25px 0 0; }
+div.related-posts div.post.last-child { margin: 0 0 0 25px; }
+
+div.related-posts div.post h4 {
+	font-weight: bold;
+	margin: 0 0 10px 0;
+}
+
+div.related-posts div.post p {
+	margin: 0 0 0 0;
+}
+
+p.back-link {
+	float: left;
+	font-weight: bold;
+	margin: 0 0 20px 0;
+}
+
+div.blog-entries div.entry {
+	behavior: url('/PIE.htc');
+	width: 668px;
+	background: #FFFFFF;
+	margin: 0 0 20px 0;
+	float: left;
+	border: 1px solid #bcc5c1;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: 0 5px 4px -3px #CCC;
+	-moz-box-shadow: 0 5px 4px -3px #CCC;
+	box-shadow: 0 5px 4px -3px #CCC;
+}
+
+div.blog-entries div.entry div.blog-post-thumbnail img{
+	float: left;
+	margin: 0 10px 10px 0;
+}
+
+div.blog-entries div.single-post {
+	padding: 40px 40px;
+	float: left;
+}
+
+div#content div.blog-entries div.single-post div.tweet-right a {
+	top: -15px;
+	right: 5px;
+}
+
+div.blog-entries div.entry div.entry-content {
+	padding: 20px;
+}
+
+div.blog-entries h2 {
+	font-size: 24px;
+	color: #9c3022;
+	margin: 20px 0 3px 0;
+	line-height: 30px;
+}
+
+div.blog-entries h2 a {
+	color: #9c3022;
+	font-weight: normal;
+}
+
+div.blog-entries h2 a:hover {
+	text-decoration: underline;
+}
+
+div.blog-entries div.entry div.entry-content p.byline {
+	margin: 0 0 15px 0;
+}
+
+div.blog-entries div.entry div.entry-content p {
+	line-height: 16px;
+	margin: 0 0 10px 0;
+}
+
+div#content div.blog-entries.feature {
+	padding: 0;
+	width: 668px;
+}
+
+div.blog-entries.feature div.entry-footer,
+div.blog-entries div.entry div.entry-footer {
+	behavior: url('/PIE.htc');
+	padding: 7px 15px;
+	-webkit-border-radius: 0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+	border-radius: 0 0 5px 5px;
+	background: -webkit-gradient(
+	    linear,
+	    left bottom,
+	    left top,
+	    color-stop(0.3, #576365),
+	    color-stop(0.65, #717f81)
+	);
+	background: -moz-linear-gradient(
+	    center bottom,
+	    #576365 30%,
+	    #717f81 65%
+	);
+	background: linear-gradient(#576365, #717f81);
+	-pie-background: linear-gradient(#576365, #717f81);
+	float: left;
+	width: 638px;
+}
+
+div.blog-entries.feature div.entry-footer div.social,
+div.blog-entries div.entry div.entry-footer div.social {
+	float: left;
+}
+
+div.blog-entries.feature div.entry-footer div.comments-link,
+div.blog-entries div.entry div.entry-footer div.comments-link {
+	padding: 3px 0;
+	float: right;
+}
+
+div.blog-entries.feature div.entry-footer div.comments-link a,
+div.blog-entries div.entry div.entry-footer div.comments-link a {
+	color: #FFF;
+	text-decoration: underline;
+}
+
+div.blog-entries div.single-post p.author {
+	font-weight: normal;
+}
+
+div.blog-entries div.single-post img.wp-post-image {
+	float: right;
+	margin: 0 0 10px 10px;
+}
+
+div.entry-comments {
+	float: left;
+}
+
+div#comments h3, 
+div#respond h3 {
+	font-size: 20px;
+	color: #A2A2A4;
+	float: left;
+	clear: both;
+	margin: 0 0 5px 0;
+}
+
+div#comments h3 {
+	width: 100%;
+	padding: 0 0 5px 0;
+}
+
+div#respond form {
+	background: #F9F9F9;
+	padding: 10px;
+	width: 360px;
+	float: left;
+	clear: both;
+}
+
+div#respond form p {
+	clear: both;
+	margin: 10px 0;
+	float: left;
+}
+
+div#respond form label {
+	float: left;
+	clear: both;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+div#respond form input[type="text"], div#respond form textarea {
+	float: left;
+	clear: both;
+	border: 1px solid #E0E0E0;
+	margin: 2px 0;
+	width: 350px;
+}
+
+div#respond form input[type="text"] {
+	height: 18px;
+}
+
+div#respond form textarea {
+	padding: 3px;
+	font-family: "Arial", Verdana, san-serif;
+	font-size: 12px;
+}
+
+div#respond form span.required {
+	font-size: 11px;
+	color: #A9B5BD;
+}
+
+div#content div.feature.company h2 {
+	font-size: 24px;
+	color: #9c3022;
+	margin: 0 0 20px 0;	
+	line-height: 30px;
+}
+
+div#content div.feature.company h3 {
+	font-size: 16px;
+	color: #9c3022;
+	margin: 0 0 15px 0;	
+}
+
+div#content div.feature.company p {
+	font-size: 12px;
+	line-height: 16px;
+	margin: 0 0 20px 0;
+}
+
+div#content div.contact div.connect {
+	margin: 25px 25px 0 0;
+	width: 190px;
+	float: left;
+}
+
+div#content div.contact div.locations {
+	margin: 25px 0 0 0;
+	width: 380px;
+	float: left;
+}
+
+div#content div.contact div.locations h3,
+div#content div.contact div.connect h3 {
+	font-size: 16px;
+	color: #9c3022;
+	margin: 0 0 10px 0;
+}
+
+div#content div.contact div.email {
+	width: 190px;
+	float: left;
+}
+
+div#content div.contact div.email h4 {
+	color: #9c3022;
+	font-weight: bold;
+}
+
+div#content div.contact div.connect a.twitter {
+	margin: 0 10px 0 0;
+}
+
+div#content div.contact div.connect a.linkedin {
+	margin: 0 10px 0 0;
+}
+
+div#content div.contact div.locations div.location {
+	margin: 0 0 2px 0;
+}
+
+div#content div.contact div.locations div.location div.title {
+	behavior: url('/PIE.htc');
+	height: 16px;
+	padding: 6px 0 6px 10px;
+	font-size: 16px;
+	color: #FFF;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background-image: -webkit-gradient(
+	    linear,
+	    left bottom,
+	    left top,
+	    color-stop(0.3, #576365),
+	    color-stop(0.65, #717f81)
+	);
+	background-image: -moz-linear-gradient(
+	    center bottom,
+	    #576365 30%,
+	    #717f81 65%
+	);
+	background: linear-gradient(#576365, #717f81);
+	-pie-background: linear-gradient(#576365, #717f81);
+	cursor: pointer;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+div#content div.contact div.locations div.location.active div.title {
+	behavior: url('/PIE.htc');
+	-webkit-border-bottom-left-radius: 0px;
+	-webkit-border-bottom-right-radius: 0px;
+	-moz-border-radius-bottomleft: 0px;
+	-moz-border-radius-bottomright: 0px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+div#content div.contact div.locations div.location.active div.title h4 {
+	background: url('assets/images/widget-title-active.png') no-repeat transparent left center;
+	padding: 0 0 0 30px;
+}
+
+div#content div.contact div.locations div.title h4 {
+	background: url('assets/images/widget-title-inactive.png') no-repeat transparent left center;
+	padding: 0 0 0 30px;
+}
+
+div#content div.contact div.locations div.location-content {
+	display: none;
+	padding: 20px 5px 20px 40px;
+	min-height: 100px;
+}
+
+div#content div.contact div.locations div.location-content p {
+	float: left;
+	clear: left;
+}
+
+div#content div.contact div.locations div.location-content div.map-thumb {
+	float: right;
+}
+
+div#content div.contact div.locations div.location.active div.location-content {
+	display: block;
+}
+
+div#content div.single-post div.authors {
+	float: left;
+}
+
+div#content div.single-post div.authors div.author div.title,
+div#content div.single-post div.authors div.author div.content {
+	float: left;
+	width: 470px;
+	margin: 0 0 3px 0;
+}
+
+div#content div.single-post div.authors div.author div.title h3 {
+	font-weight: bold;
+	color: #9C3022;
+	float: left;
+	padding: 2px 0 0 0;
+	font-size: 12px;
+	margin: 0;
+}
+
+div#content div.single-post div.authors div.author div.title span.linkedin a {
+	margin: 0 0 0 20px;
+	text-indent: -9999px;
+	width: 15px;
+	height: 15px;
+	display: block;
+	float: left;
+	clear: right;
+	background: url('assets/images/author-linkedin.jpg') no-repeat transparent;
+}
+
+div#content div.single-post div.authors div.author div.headshot {
+	float: left;
+	margin: 0 15px 0 0;
+	width: 111px;
+	height: 112px;
+	clear: both;
+}
+
+div#content div.single-post div.authors div.author div.headshot p.headshot-seemore {
+	position: relative;
+	background: #FFF;
+	top: -20px;
+	width: 50px;
+	font-size: 10px;
+	color: #106470;
+}
+
+div#content div.single-post div.author_posts {
+	border-top: 2px solid #717F81;
+	width:560px;
+}
+
+div#content div.single-post div.author_posts h3 {
+	font-size: 16px;
+	margin: 20px 0 10px 0;
+	float: left;
+	color: #9C3022;
+	width: 100%;
+}
+
+div#content div.single-post div.author_posts p {
+	margin: 0;
+}
+
+div#content form#job_sort select {
+	width: 160px;
+}
+
+div#content form#job_sort p.location {
+	margin: 0 110px 0 0;
+}
+
+div#content form#job_sort p {
+	float: left;
+}
+
+div#content div#jobs {
+	float: left;
+}
+
+div#content div#jobs div.job {
+	padding: 20px 20px 0px 20px;
+	margin: 0 0 0px 0;
+	float: left;
+}
+
+div#content div#jobs div.job.featured {
+	behavior: url('/PIE.htc');
+	background: #E5E5E5;
+	float: left;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+div#content div#jobs div.job.featured p.featured-job {
+	font-weight: bold;
+	font-size: 12px;
+	margin: 0 0 10px 0;
+}
+
+div#content div#jobs div.job div.title {
+	float: left;
+	width: 150px;
+	margin: 0 10px 0 0;
+}
+
+div#content div#jobs div.job div.title p {
+	margin: 0;
+	color: #3e4545;
+}
+
+div#content div#jobs div.job div.title h3 {
+	font-size: 12px;
+	margin: 0;
+}
+
+div#content div#jobs div.job div.title h3 a {
+	color: #9c3022;
+}
+
+div#content div#jobs div.job div.body {
+	float: left;
+	width: 430px;
+	margin: 0 0 0 0;
+	line-height: 16px;
+}
+
+div#content div#jobs div.job p.department,
+div#content div#jobs div.job p.location {
+	margin: 0;
+	font-weight: bold;
+	color: #9c3022;
+	font-size: 14px;
+}
+
+div#content div#jobs div.job p.location {
+	font-weight: normal;
+}
+
+div#content div#jobs div.job div.content {
+	margin: 20px 0 0 0;
+}
+
+div#content div#jobs div.job div.content h4 {
+	color: #9c3022;
+	font-weight: bold;
+}
+
+div#headline-controls {
+	width: 415px;
+	margin: 5px 0 0 0;
+}
+
+div#headline-prev a {
+	background: url('assets/images/slider-prev-active.png') no-repeat transparent left center;
+	padding-left: 15px;
+	float: left;
+}
+
+div#headline-next a {
+	width: 30px;
+	background: url('assets/images/slider-next-active.png') no-repeat transparent right center;
+	padding-right: 12px;
+	float: right;
+}
+
+div#headline-prev a,
+div#headline-next a {
+	color: #106470;
+	display: block;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+div#headline-nav {
+	text-align: center;
+	width: 333px;
+	float: left;
+	margin: 3px 0 0 0;
+}
+
+div#headline-nav a {
+	text-indent: -9999px;
+	background: url('assets/images/slider-page.jpg') no-repeat transparent;
+	width: 12px;
+	height: 12px;
+	float: left;
+}
+
+div#headline-nav .center {
+	float: left;
+    left: 50%;
+    position: relative;
+}
+
+div#headline-nav .center div {
+	float: left;
+    left: -50%;
+    position: relative;
+}
+
+div#headline-nav a.activeSlide {
+	background: url('assets/images/slider-active.jpg') no-repeat transparent;
+}
+
+div.comment-list {
+	float: left;
+	clear: both;
+	width: 100%;
+	margin: 0 0 40px 0;
+}
+
+div.comment-list div.comment {
+	margin: 5px 0;
+	border-bottom: 1px solid #A2A2A4;
+}
+
+div.comment-list div.comment img.avatar {
+	display: none;
+}
+
+div.news-entry div.date {
+	font-size: 12px;
+	color: #9C3022;
+	float: left;
+	font-weight: bold;
+	width: 110px;
+	float: left;
+	margin-right: 20px;
+}
+
+div.news-entry div.date a {
+	color: #9C3022;
+	margin: 0 0 10px 0;
+	float: left;
+}
+
+div.news-entry div.excerpt {
+	clear: both;
+	float: left;
+	margin: 0 0 10px 0;
+}
+
+div.news-entry div.excerpt div.image {
+	float: left;
+	width: 110px;
+	margin: 0 20px 20px 0;
+}
+
+div.news-entry div.excerpt p {
+	float: right;
+	width: 465px;
+	clear: right;
+}
+
+div.news-entry div.body {
+	float: left;
+	width: 465px;
+}
+
+div#content div.feature div.news-entries div.body h3 {
+	font-weight: bold;
+	color: #106470;
+	margin: 0 0 10px 0;
+	line-height: 20px;
+}
+
+div#content div.feature div.news-entries div.body p {
+	line-height: 16px;
+}
+
+div#content div.feature div.news-entries div.body h2 {
+	font-size: 24px;
+	color: #9c3022;
+	margin: 10px 0 10px 0;
+}
+
+div#content div.feature div.news-entries div.body h3 a {
+	font-size: 16px;
+	color: #9c3022;
+	line-height: 20px;
+	margin: 0 0 10px 0;
+}
+
+div#content div.feature div.news-entries div.body div.news-image {
+	float: right;
+	margin: 0 0 30px 10px;
+}
+
+div#content div.feature.search-results h2 {
+	font-size: 24px;
+	line-height: 28px;
+	color: #9c3022;
+	margin: 10px 0 20px 0;	
+}
+
+span.stButton {
+	width: 15px !important;
+}
+/******* why is this here, it breaks the buttons *********
+.stButton .chicklets {
+	background-image: url('assets/images/custom-share-icons.png') !important;
+}
+*/
+span.st_email span.stButton {
+	margin-left: 25px;
+}
+
+div.nav-previous {
+	float: left;
+}
+
+div.nav-next {
+	float: right;
+}
+
+div.feature.moms-content h2 {
+	color: #9C3022;
+    font-size: 24px;
+    margin: 0 0 15px 0;
+	line-height: 26px;
+}
+
+div.feature.moms-content p.callout {
+	color: #9C3022;
+	margin: 0;
+}
+
+div.feature.moms-content {
+	margin: 0 0 20px 0;
+}
+
+div.feature.moms-content div.single-post {
+	padding: 20px;
+}
+
+div.feature.moms-content ul li {
+	margin: 0 0 10px 0;
+}
+
+div#content div.feature.moms-tabs {
+	margin: 0 0 20px 0;
+	position: relative;
+	z-index: 5;
+	top: -6px;
+}
+
+div#content div.feature.moms-tabs div.pane {
+	padding: 10px 0 0 0;
+}
+
+div#content div.feature.moms-tabs div.pane p.headline {
+	font-weight: bold;
+	font-size: 14px;
+	margin: 0 0 25px 0;
+}
+
+div#content div.feature.moms-tabs div.pane table th {
+	text-align: left;
+	font-weight: bold;
+}
+
+div#content div.feature.moms-tabs div.pane table td {
+	width: 135px;
+	padding: 0 0 5px 0;
+}
+
+div#content div.feature.moms-tabs div.pane table td.result {
+	margin-left: 25px;
+	color: #9C3022;
+}
+div#content div.feature.moms-tabs div.pane div.content {
+	float: left;
+	width: 288px;
+	margin-right: 40px;
+}
+div#content div.feature.moms-tabs div.pane div.map {
+	float: left;
+}
+
+div#content div.feature.moms-foot {
+	min-height: 0px;
+	margin: 0 0 20px 0;
+}
+
+div#content div.feature.moms-foot h3 {
+	font-size: 16px;
+	line-height: 18px;
+	margin: 0 0 15px 0;
+}
+
+div#content div.moms-tabs-nav ul.tabs li {
+	behavior: url('/PIE.htc');
+	background: #D1D4D3;
+	float: left;
+	width: 191px;
+	margin: 0 5px;
+	padding: 10px 10px 5px 10px;
+	position: relative;
+	z-index: 1;
+	-webkit-border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+	border-radius: 5px 5px 0 0;
+	-webkit-box-shadow: 0px 1px 2px 1px #CCC;
+	-moz-box-shadow: 0px 1px 2px 1px #CCC;
+	box-shadow: 0px 1px 2px 1px #CCC;
+	border-top: 1px solid #BCC5C1;
+	border-right: 1px solid #BCC5C1;
+	border-left: 1px solid #BCC5C1;
+}
+
+div#content div.moms-tabs-nav ul.tabs li.active {
+	behavior: url('/PIE.htc');
+	top: -5px;
+	padding: 12px 10px 8px 10px;
+	background: #FFF;
+	z-index: 15;
+	border-top: 1px solid #BCC5C1;
+	border-right: 1px solid #BCC5C1;
+	border-left: 1px solid #BCC5C1;
+	-webkit-box-shadow: 0 -1px 1px -1px #CCC;
+	-moz-box-shadow: 0 -1px 1px -1px  #CCC;
+	box-shadow: 0 -1px 1px -1px  #CCC;
+}
+
+div#content div.moms-tabs-nav ul li a {
+	display: block;
+	font-size: 12px;
+}
+
+div#content div.moms-tabs-nav ul li.active a {
+	font-weight: bold;
+	color: #9C3022;
+}
+
+div#content div.feature.moms-tabs div.pane div.key p {
+	font-size: 14px;
+	font-weight: bold;
+	margin: 40px 0 10px 0;
+}
+
+div#content div.feature.moms-tabs div.pane div.key ul li {
+    font-weight: bold;
+    list-style-type: none;
+    padding: 0 0 10px 20px;
+	font-size: 11px;
+}
+
+div#content div.feature.moms-tabs div.pane div.key ul li.square {
+    background: url("assets/images/key-square.jpg") no-repeat scroll 0 2px transparent;
+    color: #DC291E;
+}
+
+div#content div.feature.moms-tabs div.pane div.key ul li.circle {
+    background: url("assets/images/key-circle.png") no-repeat scroll 0 2px transparent;
+    color: #1E27AC;
+}
+
+div#blog-tools div.search input[type="text"] {
+	color: #ccc;
+}
+div#blog-tools div.search input[type="text"].active {
+	color: #000;
+}
+div#blog-tools div.search input[type="submit"]:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+div#content div#insight-details.feature div#shopper-profile {
+	background: #D9D9D9;
+	float: left;
+	padding: 10px;
+}
+
+div#content div#insight-details.feature div#shopper-profile p {
+	margin: 0;
+}
+
+div#content div#insight-details.feature div#shopper-profile table {
+	width: 255px;
+	margin: 0 0 10px 0;
+}
+
+div#content div#insight-details.feature div#shopper-profile table td {
+	padding: 0;
+}
+
+div#content div#insight-details.feature div#shopper-profile div.key {
+	position: inline;
+	top: 0;
+}
+
+div#content div#insight-details.feature div#shopper-profile ul {
+	margin: 0;
+}
+
+div#content div#insight-details.feature div#shopper-profile ul li {
+	padding: 0 0 2px 20px;
+}
+
+div#content div#insight-details.feature div.spotlight-ribbon {
+	width: 215px;
+	height: 125px;
+	position: absolute;
+	top: -15px;
+	right: -15px;
+	z-index: 1;
+}
+
+div.single-post ul.page-list li ul.children {
+	margin: 0;
+}
+
+img#wpstats{visibility:hidden; height:0px;}
+
+/*************** share this sprite fixes ****************/

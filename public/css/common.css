@@ -1,0 +1,309 @@
+@font-face {
+    font-family: 'montserratbold';
+    src: url(/font/montserrat-bold-webfont.eot);
+    src: url(/font/montserrat-bold-webfont.eot?#iefix) format('embedded-opentype'),
+         url(/font/montserrat-bold-webfont.woff) format('woff'),
+         url(/font/montserrat-bold-webfont.ttf) format('truetype'),
+         url(/font/montserrat-bold-webfont.svg#montserratbold) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'montserratregular';
+    src: url('/font/montserrat-regular-webfont.eot');
+    src: url('/font/montserrat-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/font/montserrat-regular-webfont.woff') format('woff'),
+         url('/font/montserrat-regular-webfont.ttf') format('truetype'),
+         url('/font/montserrat-regular-webfont.svg#montserratregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+.mrtop10per {
+    float: left;
+    font-size: 40px !important;
+    line-height: 48px !important;
+    margin-top: -20% !important;
+    text-align: center;
+    width: 100%;
+}
+.fluidHeight {
+	width: 100%;
+	padding: 0 0 29% 0;
+	margin:0px 0 0 0;
+	position: relative;
+}
+.fluidHeight.home {
+	padding:0 !important;
+	height:543px;
+	border:none;
+}
+
+.fluidHeight.home .iosSlider .slider .item .inner .text2 {
+    padding:0;
+    width:780px;  /* Changed by Michael from 715 to 780 to allow for the text to fit as requested  */
+    height:311px;
+    padding:80px 40px 40px 40px;  /* Changed by Michael from 50px to 40px to allow for teh text to fit  */
+    top:60px;
+    opacity:10 !important;
+}
+.fluidHeight.home.square .iosSlider .slider .item .inner .text2 {
+    padding:0;
+    width:341px;
+    height:308px;
+    padding:80px 50px 50px 50px;
+    top:56px;
+    opacity:10 !important;
+}
+.sliderContainer {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	padding: 0% 0;
+	background: url(/images/container-bg.jpg) repeat 50% 0;
+}
+
+.iosSlider {
+	position: relative;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	width: 100% !important;
+	height:100%; !important;
+}
+
+.iosSlider .slider {
+	width: 100%;
+	height: 100%;
+}
+
+.iosSlider .slider .item {
+	width: 100%;
+	height: 100%;
+	padding:0px 0 0px 0;
+}
+
+.iosSlider .slider .item .inner {  /* height and width of main background image  */
+	position: relative;
+	top: 0;
+	left: 0;
+	/*width: 1024px;*/
+	width:100%;
+	margin: 0 auto;
+	height: 100%;
+	/*box-shadow: 0 0 10px -5px #000;*/
+	background-position: 50% 0;
+	background-repeat: no-repeat;
+	background-size:100% auto;             /* increased mobile photo size josh */
+}
+
+.iosSlider .slider .item .inner .selectorShadow {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background: url(/images/selector-shadow.png) no-repeat 0 0;
+	width: 120px;
+	height: 30px;
+}
+
+.iosSlider .slider .item .inner .text1 {
+	background: none repeat scroll 0 0 #000000;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    position: absolute;
+    right: 150px;
+    top: 30px;
+    padding: 5px 2px 0 7px;
+}
+
+.iosSlider .slider .item .inner .text1 span {
+	color: #FFFFFF;
+    font: 50px/65px 'montserratregular';
+    padding: 0 8px;
+}
+
+.iosSlider .slider .item .inner .text2 {  /* height and width of grey box  */
+	background:url(/images/slider-txt-bg.png) repeat;
+    padding:0;
+	height:410px;
+    position: relative;
+    left: 0;
+	width:410px;
+	margin:0 auto;
+	text-align: center;
+	position:relative;
+}
+.slider-bttn {  /* height and width of red rectangle  */
+	position:absolute;
+	width:97%;
+	text-align:center;
+	bottom:35px;
+	*left:0;
+}
+.slider-sqBtn {
+    position: absolute;
+    display: block;
+    text-align: center;
+    width:100%;
+    left: 0;
+    bottom: 80px;
+    white-space: nowrap;
+}
+.slider-bttn a, .slider-sqBtn a {
+    background-color: #7B241B;
+    border: 0 none;
+    color: #FFFFFF;
+    cursor: pointer;
+    font: 16px 'montserratbold';
+	padding:15px 40px;  /* height and width of red rectangle padding around link text  */
+    text-align: center;
+    text-transform: uppercase;
+}
+.slider-bttn a:hover {
+	background-color:#8c2c22;
+	color:#fff;
+	text-decoration:none;
+}
+.fluidHeight.home .slider-bttn {
+	width:800px;
+}
+.iosSlider .slider .item .inner .text2 span {
+	color: #FFFFFF;
+    font: 43px/52px 'montserratregular';
+}
+
+.iosSlider .slider .item1 .inner {
+	background-image: url(/images/bn.jpg);
+}
+
+.iosSlider .slider .item2 .inner {
+	background-image: url(/images/bn1.jpg);
+}
+
+.iosSlider .slider .item3 .inner {
+	background-image: url(/images/bn3.jpg);
+}
+.iosSlider .slider .item4 .inner {
+	background-image: url(/images/bn4.jpg);
+}
+.iosSlider .slider .item5 .inner {
+	background-image: url(/images/bn5.jpg);
+}
+.iosSlider .slider .item6 .inner {
+	background-image: url(/images/bn6.jpg);
+}
+.success-stories.success-stories {
+	background:url(/images/bn4.jpg) no-repeat;
+	background-height:100%;
+}
+.sliderContainer .scrollbarContainer {
+	position: relative;
+	bottom: 4px;
+	left: 0;
+	width: 1024px;
+	height: 4px;
+	margin: 0 auto;
+	z-index: 1;
+	display:none;
+}
+
+
+@media screen and (max-width: 768px) {
+
+	.iosSlider .slider .item .inner .text1 span {
+		font: 40px/50px 'montserratregular';
+	}
+
+	.iosSlider .slider .item .inner .text2 {
+		top:10px;
+	}
+	.mrtop10per {
+		float: left;
+		font-size: 15px !important;
+		line-height: normal !important;
+		margin-top: -20% !important;
+		text-align: center;
+		width: 100%;
+	}
+	.iosSlider .slider .item .inner .text2 span {
+		color: #FFFFFF;
+		font:14px 'montserratregular';  /* changed from 15 to 14 by Michael */
+	}
+.iosSlider .slider .item .inner .text2 {
+		padding:15px 7px 7px;
+		position: relative;
+		left: 0;
+		top:5px;
+		width:36%; margin:0 auto;
+		text-align: center;
+}
+.fluidHeight.home.square .iosSlider .slider .item .inner .text2 {
+    padding:0;
+    width:200px;
+    height:130px;
+    padding:35px 30px 30px 30px;
+    top:8px;
+    opacity:10 !important;
+}
+.slider-sqBtn a {
+    font: 10px 'montserratbold';
+    padding:15px 20px;
+}
+
+.iosSlider .slider .item .inner {
+	background-size:150% auto;             /* increased mobile photo added here by Michael */
+}
+}
+
+
+@media only screen and (min-width:769px) and (max-width: 1200px) {  /* changed from 1024 to 1200 by Michael */
+.iosSlider .slider .item .inner .text2 span {
+    color: #FFFFFF;
+    font: 30px/28px 'montserratregular';  /* added linespacing here by Michael */
+}
+}
+.mrtop10per {
+    float: left;
+    font-size: 23px !important;
+    line-height: normal !important;
+    margin-top: -38% !important;
+    text-align: center;
+    width: 100%;
+}
+
+.iosSlider .slider .item .inner .text2 {
+	min-height:40%;
+}
+
+}
+
+@media only screen and (min-width: 320px) and (max-width: 400px) {
+
+.mrtop10per {
+    float: left;
+    font-size: 10px !important;
+    line-height: normal !important;
+    margin-top: -12% !important;
+    text-align: center;
+    width: 100%;
+}
+.height19 {
+	min-height:19% !important;
+}
+}
+
+
+@media only screen and (min-width: 400px) and (max-width: 700px) {
+.height19 {
+	min-height:33% !important;
+}
+.mrtop10per {
+	margin-top:-3% !important;
+}
+.button {
+	font-size:9px !important;
+}
+}

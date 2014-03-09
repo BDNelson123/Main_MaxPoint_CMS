@@ -1,0 +1,95 @@
+<div class="full-with-bg">
+  <div class="small-banner blog-bg" style="background-image: url(/images/mp_blog_1641.jpg);"></div>
+</div>
+<div class="content_bg pdtop55">
+  <div class="wrapper">
+    <div class="content">
+      <div class="normal-page">
+
+        <div class="leftcol">
+          <% if params[:term] %>
+            <h1 class="large">Search Results</h1>
+            <span class="result-info">
+              The following <%= @posts.length %> items match 
+              <strong><%= params[:term] %></strong>
+            </span>
+          <% end %>
+          <% @posts.each do |post| %>
+            <div class="blog-box">
+              <h3><a href="<%= post.locality_full_path %>"><%= post.title %></a></h3>
+              <div class="blog-info"><%= published_at(post) %> | author: <%= post.author.name %></div>
+              <div class="rich-text">
+                <%= post.description.to_s.html_safe %>
+              </div>
+              <a href="<%= post.locality_full_path %>" class="read-more">Read full post</a>
+            </div>
+          <% end %>
+          <%= paginate @posts %>
+        </div>
+
+        <div class="rightcol">
+          <div class="sahrethis">
+            <div class="share-label">Share</div>
+            <ul class="social-media">
+              <li><span class="st_facebook_custom fb"></span></li>
+              <li><span class="st_linkedin_custom in"></span></li>
+              <li><span class="st_twitter_custom twt"></span></li>
+              <li><span class="st_email_custom mil"></span></li>
+            </ul>
+          </div>
+          <div class="search_part blog">
+            <div class="search_icon">
+              <img title="" alt="" src="/images/search_icon.jpg">
+            </div>
+            <%= form_tag cms_blog_search_path, method: :get do %>
+              <%= text_field_tag "term", params[:term], class: 'field', placeholder: 'SEARCH BLOG' %>
+            <% end %>
+          </div>
+          <div class="widget-box">
+            <h3>TOPICS</h3>
+            <ul class="link-list">
+              <% categories.each do |category| %>
+                <li><%= link_to_if category.posts.any?, category.name, cms_category_path(category) %></li>
+              <% end %>
+            </ul>
+          </div>
+          <div class="widget-box">
+            <h3>TAGS</h3>
+            <ul class="link-list">
+              <% tags.first(10).each do |tag| %>
+                <li><%= link_to_if tag.posts.any?, tag.name, cms_tag_path(tag) %></li>
+              <% end %>
+            </ul>
+          </div>
+          <div class="widget-box">
+            <h3>ARCHIVES</h3>
+            <ul class="link-list">
+              <% months_by_year.to_a.reverse.each do |year, months| %>
+                <li><%= link_to year, cms_year_path(year) %></li>
+                <% if params[:year].to_i == year %>
+                <ul class="link-list">
+                  <% months.reverse.each do |month| %>
+                  <li><%= link_to month_name(month), cms_year_month_path(year, month) %></li>
+                  <% end %>
+                </ul>
+                <% end %>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+<div class="bottom_contact">
+  <div class="wrapper">
+    <div class="see_work">
+      SEE HOW MAXPOINT CAN WORK FOR YOU. 
+      <% navigation :contact do |contact| %>
+        <a href="<%= contact.locality_location %>"><strong>CONTACT US</strong></a>.
+      <% end %>
+    </div> 
+    <div class="clear"></div>
+  </div>
+</div>

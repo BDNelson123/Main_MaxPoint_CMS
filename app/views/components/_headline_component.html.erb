@@ -1,0 +1,13 @@
+<div class="noslider noslider <%= component.link_text.present? ? 'with-button' : '' %>">
+    <% if component.background_image_uid %>
+    <div class="inner" style="background-image: url(<%= component.background_image.thumb('1200x452#').url %>)">
+        <div class="nortext"><span class="<%= component.gravity %>-txt"><%= f(component.text) %></span></div>
+    </div>
+    <% if component.link_text.present? %>
+      <div class="slider-sqBtn">
+        <%= cms_link_to component.link_text, [component, :link] rescue "" %>
+      </div>
+    <% end %>
+    <% end %>
+</div>
+

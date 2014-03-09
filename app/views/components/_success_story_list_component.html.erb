@@ -1,0 +1,19 @@
+<div class="wrapper">
+    <div class="content">
+        <div class="see-all">
+            <div class="menu_list" id="firstpane">
+                <p class="menu_head" style="background-image: url(/images/plus.png);">
+                <span><%= component.title %></span>
+                </p>
+                <div class="menu_body" style="display: none;">
+                    <div class="stories">
+                        <% components.each do |component| %>
+                            <%= render_component component %>
+                        <% end %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

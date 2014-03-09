@@ -1,0 +1,13 @@
+<div class = 'item item6'>
+    <div class='inner' style="background-image: url(<%= component.image.thumb('1200x543#').url rescue ""%>);">
+        <div class='selectorShadow'></div>
+        <div class='text2'>
+            <span class=""><%= f(component.caption) %></span>
+            <% if component.link_text.to_s.strip.present? %>
+                <div class="slider-<%= component.parent.caption_style == 'rectangle' ? 'bttn' : 'sqBtn' %>">
+                    <%= cms_link_to component.link_text, [component, :link] rescue "" %>
+                </div>
+            <% end %>
+        </div>
+    </div>
+</div>

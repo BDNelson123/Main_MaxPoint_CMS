@@ -1,0 +1,45 @@
+
+/*
+----------------------------------------------------------------------------------
+Default css 
+----------------------------------------------------------------------------------
+*/
+
+/* Reset all of the document's element styles/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/* Clearing Floats Class STARTS */
+.Wrapper {
+	display: inline-block;}
+.Wrapper:after {
+	Content: "."; display: block; height: 0; clear: both; visibility: hidden;}
+* html .Wrapper {
+	height: 1%; }
+.Wrapper {
+	display: block;}
+/* Clearing Floats Class ENDS  */
+
+
+
+
+
+/*  */
+
+.hide, .Hide {
+	display: none;}
+.clear {
+	width: 100%; height: 1px; clear: both; display: block; overflow: hidden;}
+			

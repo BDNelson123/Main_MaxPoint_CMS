@@ -1,0 +1,19 @@
+<li>
+<%= cms_link_to [component, :link] do %>
+    <% if component.background_image_uid.present? %>
+        <img class="img-style row4" src="<%= component.background_image.thumb('306x306#').url %>" alt="" title=""  />
+    <% else %>
+        <img class="img-style row4" />
+    <% end %>
+    <span class="description_part">
+        <h4><%= f(component.title) %></h4>
+        <% if component.image_uid.present? %>
+            <img src="<%= component.image.thumb('215x70>').url %>" alt="" title="" class="mrleft_15"  />
+        <% end %>
+        <div class="description<%= component.image_uid.blank? ? ' mrtop_20' : '' %>"><%= f(component.description) %></div>
+    </span>
+    <div class="description_link bottom-fix">
+        <%= cms_link_to component.link_text, [component, :link] rescue "" %>
+    </div>
+<% end %>
+</li>

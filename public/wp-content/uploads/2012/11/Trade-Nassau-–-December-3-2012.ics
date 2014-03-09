@@ -1,0 +1,40 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Apple Inc.//iCal 5.0.3//EN
+CALSCALE:GREGORIAN
+BEGIN:VTIMEZONE
+TZID:America/New_York
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+DTSTART:20070311T020000
+TZNAME:EDT
+TZOFFSETTO:-0400
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+DTSTART:20071104T020000
+TZNAME:EST
+TZOFFSETTO:-0500
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+CREATED:20121127T151149Z
+UID:8107EE05-9871-4BA8-AA41-283952D330E0
+DTEND;TZID=America/New_York:20121203T150000
+TRANSP:OPAQUE
+SUMMARY:Trade Nassau – December 3\, 2012
+DTSTART;TZID=America/New_York:20121203T080000
+DTSTAMP:20121127T151710Z
+LOCATION:Carle Place\, NY
+SEQUENCE:7
+DESCRIPTION:Join us at Trade Nassau\, the largest business-to-business t
+ rade show in Nassau County. At this event\, you will have the opportunit
+ y to learn best practices from industry experts and to network with prem
+ ier businesses from Long Island and the greater metropolitan area\, nati
+ onal corporations\, entrepreneurs\, non-profits\, government agencies\, 
+ business advocacy groups\, and the media.\n\nhttp://nassautradeshow.com/
+ \n
+END:VEVENT
+END:VCALENDAR

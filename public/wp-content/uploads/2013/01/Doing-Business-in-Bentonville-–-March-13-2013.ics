@@ -1,0 +1,40 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Apple Inc.//iCal 5.0.3//EN
+CALSCALE:GREGORIAN
+BEGIN:VTIMEZONE
+TZID:America/New_York
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+DTSTART:20070311T020000
+TZNAME:EDT
+TZOFFSETTO:-0400
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+DTSTART:20071104T020000
+TZNAME:EST
+TZOFFSETTO:-0500
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+CREATED:20130107T161855Z
+UID:773EC64D-4BB4-48B7-AE2B-D0F3C6AB99D8
+DTEND;TZID=America/New_York:20130313T090000
+TRANSP:OPAQUE
+SUMMARY:Doing Business in Bentonville – March 13\, 2013
+DTSTART;TZID=America/New_York:20130313T070000
+DTSTAMP:20130107T162549Z
+LOCATION:Rogers\, Arkansas
+SEQUENCE:3
+DESCRIPTION:The retail industry is constantly innovating\, evolving\, an
+ d improving. To keep up with what’s most relevant today\, it is critical
+  for organizations of every size to seek best practices that will immedi
+ ately improve their decision-making\, operations\, and bottom line. The 
+ Doing Business in Bentonville™ speaker series is all about keeping you o
+ n top of this ever-changing evolution in tactical business knowledge.\n\
+ nhttp://www.doingbusinessinbentonville.com/
+END:VEVENT
+END:VCALENDAR

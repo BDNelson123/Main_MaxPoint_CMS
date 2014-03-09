@@ -1,0 +1,19 @@
+<div class="alllogo_bg pdtop68"><h3>MAXPOINT IN ACTION</h3></div>
+<div class="help_part">
+    <div class = 'sliderContainer'>
+        <div class = 'iosSlider'>
+            <div class = 'slider'>
+                <% components.each do |component| %>
+                    <%= render_component component %>
+                <% end %>
+            </div>
+        </div>
+        <div class = 'slideSelectors'>
+            <% components.each_with_index do |component, index| %>
+                <div class = 'item <%= index == 0 ? 'selected' : '' %>'></div>
+            <% end %>
+        </div>
+        <div class = 'scrollbarContainer'></div>
+    </div>
+</div>
+

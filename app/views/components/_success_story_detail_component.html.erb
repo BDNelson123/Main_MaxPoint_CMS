@@ -1,0 +1,43 @@
+<div class="wrapper success-story-detail" style="overflow: hidden">
+  <div class="content">
+    <div class="full-with-bg">
+      <div class="content nobg">
+        <div class="middle-share">
+          <div class="social-section noborder">
+            <div class="my-media">
+              <% if component.pdf.present? %>
+                <a href="<%=component.pdf.url%>" class="dwn-pdf">DOWNLOAD PDF VERSION</a> 
+                <span>&nbsp;| Share</span>
+              <% else %>
+                <span>Share</span>
+              <% end %>
+              <ul class="media">
+                <li><span class="st_facebook_custom fb"></span></li>
+                <li><span class="st_linkedin_custom in"></span></li>
+                <li><span class="st_twitter_custom twt"></span></li>
+                <li><span class="st_email_custom mil"></span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="leftcol other rich-text">
+      <% if component.header_image_uid.present? %>
+        <div class="chart-img"><img src="<%= component.header_image.thumb('643x').url %>" /></div>
+      <% end %>
+      <h1 class="bottom30"><%= component.title %></h1>
+      <p>
+        <%= component.body %>
+      </p>
+    </div>
+    <div class="rightcol other rich-text">
+      <% if component.sidebar_image_uid.present? %>
+        <%= cms_link_to image_tag(component.sidebar_image.thumb('306x').url), [component, :sidebar_image_link] %>
+      <% end %>
+      <div class="simply-txt first rich-text"><%= component.sidebar_text %></div>
+    </div>
+  </div>
+</div>
+</div>
+

@@ -1,0 +1,10 @@
+<li>
+<%= cms_link_to [component, :link] do %>
+    <% if component.background_image_uid.present? %>
+        <img class="img-style row5" src="<%= component.background_image.thumb('306x192#').url %>" alt="" title=""  />
+    <% end %>
+    <h6 class="mr-122"><%= f(component.text) %></h6>
+    <span class="linkpart"><%= component.link_text %></span>
+<% end %>
+</li>
+

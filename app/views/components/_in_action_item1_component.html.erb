@@ -1,0 +1,15 @@
+<div class = 'item'>
+    <div class = 'inner'>
+        <div class = 'text2'>
+            <div class="left" style="background-image: url(<%= component.image.thumb('385x269#').url %>)"></div>
+            <div class="right">
+                <h4><%= component.highlight1.to_s.upcase %></h4>
+                <span><%= component.text1 %></span>
+                <h4><%= component.highlight2.to_s.upcase %></h4>
+                <span><%= component.text2 %></span>
+                <%= cms_link_to component.link_text, [component, :link], class: 'see-link' rescue "" %>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,20 @@
+<div class="white_bg margintop10">
+    <div class="wrapper">
+        <div class="sucess_stories">
+            <% if component.image_uid.present? %>
+                <img src="<%= component.image.thumb('456x355#').url %>" alt="" title=""  />
+            <% end %>
+            <div class="sucess_right">
+                <p>
+                    <%= component.title.to_s.upcase %>
+                    <span><%= component.summary %></span>
+                </p>
+                <% if component.link_text.present? %>
+                    <%= cms_link_to component.link_text.to_s.upcase, [component, :link], class: 'success-bttn' rescue nil %>
+                <% end %>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+

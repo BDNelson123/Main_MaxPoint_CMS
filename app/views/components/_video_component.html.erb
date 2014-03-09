@@ -1,0 +1,37 @@
+<div class="video">
+  <div class="wrapper">
+    <div class="video-container">
+      <img src="/images/howWeWork.jpg">
+      <div id="video_text_overlay">
+        <h1>HOW WE WORK</h1>
+        <p>
+          How does MaxPoint find the right customers in the right neighborhoods?<br>
+          Watch our short video to find out.
+        </p>
+      </div>
+      <div id="video_play_btn">
+        <img src="/images/playbtn.png">
+        <img src="/images/playbtn_hover.png" id="btn_hover">
+      </div>
+      <div id="player" style="display: none">
+      </div>
+      <script>
+var theight = $('.video-container').width() * 0.333;
+var twidth = theight * 1.78;
+
+var ua = navigator.userAgent,
+    event = (ua.match(/iPhone/i) || ua.match(/iPad/i)) ? "touchstart" : "click";
+
+var video_visible = false;
+$('.video-container').bind(event, function() {
+    if(video_visible)
+      return;
+    video_visible = true;
+  $('#player').show();
+  $('#player').append('<iframe width="'+ twidth + '" height="' + theight + '" src="http://www.youtube.com/embed/<%= component.you_tube_id %>?autoplay=1&rel=0" frameborder="0" allowfullscreen></iframe>');
+});
+
+      </script>
+    </div>
+  </div>
+</div>

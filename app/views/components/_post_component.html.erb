@@ -1,0 +1,104 @@
+<div class="content_bg pdtop55">
+  <div class="wrapper">
+    <div class="content blog-post">
+      <div class="normal-page">
+
+        <div class="leftcol">
+          <div class="blog-box">
+            <h3><a href="<%= @post.locality_full_path %>"><%= @post.title %></a></h3>
+            <div class="blog-info"><%= published_at(@post) %> | author: <%= @post.author.name %></div>
+            <div class="rich-text">
+              <%= @post.body.html_safe %>
+            </div>
+          </div>
+          <h4>Comments</h4>
+          <div class="comments">
+            <% @post.approved_comments.ascending.each do |comment| %>
+              <div class="blog-box">
+                <p><%= comment.body %></p>
+                <div class="blog-info">
+                  <%= created_at(comment) %> | author: <%= comment.name %>
+                  <% if comment.website.present? %>
+                    | website: <%= comment.website %>
+                  <% end %>
+                </div>
+              </div>
+            <% end %>
+            <h3>Add your comment</h3>
+            <%= form_for (@comment || Cms::Comment.new), url: cms_comments_path(@post), html: {class: 'comment-form'} do |f| %>
+              <% if @comment.present? && @comment.errors.any? %>
+                <div id="error_explanation">
+                  <h4><%= pluralize(@comment.errors.count, "error") %> stopped this comment:</h4>
+
+                  <ul>
+                    <% @comment.errors.full_messages.each do |msg| %>
+                      <li><%= msg %></li>
+                    <% end %>
+                  </ul>
+                </div>
+              <% end %>
+              <div class="">
+                <%= f.label :name %>
+                <%= f.text_field :name %>
+              </div>
+              <div class="">
+                <%= f.label :email %>
+                <%= f.email_field :email %>
+              </div>
+              <div class="">
+                <%= f.label :website %>
+                <%= f.text_field :website %>
+              </div>
+              <div class="">
+                <%= f.label :body, "Comment" %>
+                <%= f.text_area :body, rows: 5 %>
+              </div>
+              <div>
+                <%= f.submit "Post comment", class: "submit button" %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+
+        <div class="rightcol">
+          <div class="sahrethis">
+            <div class="share-label">Share</div>
+            <ul class="social-media">
+              <li><span class="st_facebook_custom fb"></span></li>
+              <li><span class="st_linkedin_custom in"></span></li>
+              <li><span class="st_twitter_custom twt"></span></li>
+              <li><span class="st_email_custom mil"></span></li>
+            </ul>
+          </div>
+          <div class="search_part blog">
+            <div class="search_icon">
+              <img title="" alt="" src="/images/search_icon.jpg">
+            </div>
+            <%= form_tag cms_blog_search_path, method: :get do %>
+              <%= text_field_tag "term", params[:term], class: 'field', placeholder: 'SEARCH BLOG' %>
+            <% end %>
+          </div>
+          <div class="widget-box">
+            <h3>RELATED POSTS</h3>
+            <ul class="link-list">
+              <% related_posts(@post).first(10).each do |post| %>
+                <li><a href="<%= post.locality_full_path %>"><%= post.title %></a></li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="see-all">
+        <span>See All Posts</span>
+        <a href="<%= Cms::BlogPage.in(current_locality).first.locality_path %>" class="see-all-bttn"></a>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+<div class="bottom_contact">
+  <div class="wrapper">
+    <div class="see_work">SEE HOW MAXPOINT CAN WORK FOR YOU. <strong>CONTACT US</strong>.</div> 
+    <div class="clear"></div>
+  </div>
+</div>

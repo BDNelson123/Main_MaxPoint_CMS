@@ -1,0 +1,40 @@
+<div class="graybg">
+    YOU MAY ALSO BE INTERESTED IN:
+</div>
+<div class="content_bg">
+    <div class="icon-wrapper">
+        <div class="solution_part effect-container">
+            <ul class="interested-item">
+                <li>
+                <a href="<%= component.left_location rescue "#" %>" <%= target component, :left %>>
+                    <% if component.left_background_image_uid %>
+                        <img class="img-style row5" src="<%= component.left_background_image.thumb('306x192#').url %>" alt="" title=""  />
+                    <% end %>
+                    <h6 class="mr-122"><%= component.left_text %></h6>
+                    <span class="linkpart"><%= component.left_link_text %></span>
+                </a>
+                </li>
+                <li>
+                <a href="<%= component.center_location rescue "#" %>" <%= target component, :center %>>
+                    <% if component.center_background_image_uid %>
+                        <img class="img-style row4" src="<%= component.center_background_image.thumb('306x192#').url %>" alt="" title=""  />
+                    <% end %>
+                    <h6 class="mr-122"><%= component.center_text %></h6>
+                    <span class="linkpart"><%= component.center_link_text %></span>
+                </a>
+                </li>
+                <li>
+                <a href="<%= component.right_location rescue "#" %>" <%= target component, :right %>>
+                    <% if component.right_background_image_uid %>
+                        <img class="img-style row3" src="<%= component.right_background_image.thumb('306x192#').url %>" alt="" title=""  />
+                    <% end %>
+                    <h6 class="mr-122"><%= component.right_text %></h6>
+                    <span class="linkpart"><%= component.right_link_text %></span>
+                </a>
+                </li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+

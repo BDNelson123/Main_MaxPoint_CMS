@@ -1,0 +1,21 @@
+<div class="<%= component.background_style == 'pattern' ? 'content_bg' : '' %> pdtop55">
+    <div class="wrapper">
+        <% if component.title.to_s.strip.present? %>
+        <h2><%= component.title.to_s.upcase %></h2>
+        <% end %>
+        <% if component.description.strip.present? %>
+        <div class="content-top light"><%= component.description %></div>
+        <% end %>
+    </div>
+    <div class="icon-wrapper">
+        <div class="solution_part effect-container">
+            <ul class="nospace">
+                <% components.each do |component| %>
+                    <%= render_component component %>
+                <% end %>
+            </ul>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+

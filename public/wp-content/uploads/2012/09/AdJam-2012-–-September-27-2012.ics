@@ -1,0 +1,39 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Apple Inc.//iCal 5.0.3//EN
+CALSCALE:GREGORIAN
+BEGIN:VTIMEZONE
+TZID:America/Los_Angeles
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0800
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+DTSTART:20070311T020000
+TZNAME:PDT
+TZOFFSETTO:-0700
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0700
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+DTSTART:20071104T020000
+TZNAME:PST
+TZOFFSETTO:-0800
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+CREATED:20120912T235005Z
+UID:4EFA8FE4-1263-442F-89EA-6993D5C65DDE
+DTEND;TZID=America/Los_Angeles:20120927T235900
+TRANSP:OPAQUE
+SUMMARY:AdJam 2012 – September 27\, 2012
+DTSTART;TZID=America/Los_Angeles:20120927T180000
+DTSTAMP:20120912T235256Z
+LOCATION:House of Blues - West Hollywood\, CA
+SEQUENCE:14
+DESCRIPTION:Join us as some of LA’s best ad agencies show off their musi
+ cal talent in front of 1\,200 marketing\, advertising\, and media profes
+ sionals. Agencies will compete against one another in thinkLA’s Battle o
+ f the Agency Bands\, with the winning band taking home the coveted AdJam
+  Axe and bragging rights for the year.\n\nhttp://thinkla.org/events/109/
+ \n
+END:VEVENT
+END:VCALENDAR

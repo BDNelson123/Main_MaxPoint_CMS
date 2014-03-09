@@ -1,0 +1,472 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name = "viewport" content = "width=device-width, minimum-scale=1, maximum-scale=1" />
+		<meta name = "apple-mobile-web-app-capable" content = "yes" />
+		<title>Welcome to Maxpoint</title>
+		<!-- CSS -->
+		<link rel = "stylesheet" href = "css/default.css" />
+		<link rel = "stylesheet" media = "screen" href = "css/common.css" />
+        <link rel="stylesheet" type="text/css" href="css/menu.css" />
+        <link href="css/maxpoint.css" rel="stylesheet" type="text/css" />
+        <link rel="shortcut icon" href="favicon.ico" />
+        <!--[if IE]><script src="js/html5.js"></script><![endif]-->
+        
+
+		<!-- jQuery library -->
+		<script type="text/javascript" src = "js/jquery-1.4.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easing-1.3.js"></script>
+		<!-- iosSlider plugin -->
+		<script src="js/jquery.iosslider.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('.iosSlider').iosSlider({
+					desktopClickDrag: true,
+					snapToChildren: true,
+					navSlideSelector: '.sliderContainer .slideSelectors .item',
+					onSlideComplete: slideComplete,
+					onSliderLoaded: sliderLoaded,
+					onSlideChange: slideChange,
+					autoSlide: true,
+					scrollbar: true,
+					scrollbarContainer: '.sliderContainer .scrollbarContainer',
+					scrollbarMargin: '0',
+					scrollbarBorderRadius: '0'
+				});
+			});
+			function slideChange(args) {
+			
+				$('.sliderContainer .slideSelectors .item').removeClass('selected');
+				$('.sliderContainer .slideSelectors .item:eq(' + (args.currentSlideNumber-1) + ')').addClass('selected');
+				try {
+					console.log(args);
+				} catch(err) {
+				}
+			}
+			
+			function slideComplete(args) {
+					
+				$(args.sliderObject).find('.text1, .text2').attr('style', '');
+				
+				$(args.currentSlideObject).find('.text1').animate({
+					right: '100px',
+					opacity: '0.8'
+				}, 400, 'easeOutQuint');
+				
+				$(args.currentSlideObject).find('.text2').delay(200).animate({
+					right: '50px',
+					opacity: '0.8'
+				}, 400, 'easeOutQuint');
+				
+			}
+			
+			function sliderLoaded(args) {
+					
+				slideComplete(args);
+				
+				slideChange(args);
+				
+			}
+		</script>
+
+	<!-- dropdown menu strats here -->
+        <script type='text/javascript' src='js/jquery.hoverIntent.minified.js'></script>
+        <script type='text/javascript' src='js/jquery.dcmegamenu.1.2.js'></script>
+        <script type="text/javascript">
+        $(document).ready(function($){
+            $('#mega-menu-tut').dcMegaMenu({
+                rowItems: '5',
+                speed: 'fast'
+            });
+        });
+        </script>
+	<!-- dropdown menu close here -->
+
+
+<!-- country dropdown -->
+<link rel="stylesheet" type="text/css" href="css/dd.css" />
+<script type="text/javascript" src="js/jquery.dd.js"></script>
+<script type="text/javascript">
+function showvalue(arg) {
+	alert(arg);
+	//arg.visible(false);
+}
+$(document).ready(function() {
+try {
+		//$("body select").msDropDown();
+		$("#websites1").msDropDown({useSprite:'sprite'})
+		$("#ver").html($.msDropDown.version);
+		} catch(e) {
+			alert("Error: "+e.message);
+		}
+})
+</script>
+<!-- //country dropdown -->
+
+<!-- dropdown menu strats here -->
+
+<script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
+<script type="text/javascript">
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+    carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function() {
+    jQuery('#mycarousel').jcarousel({
+        auto: 2,
+        wrap: 'last',
+        initCallback: mycarousel_initCallback
+    });
+});
+
+</script>
+<!-- dropdown menu close here -->
+</head>
+<body>
+<div class="top-streep">
+<div class="wrapper">
+          <header>
+    <h1 id="logo"><a href="#"><img src="images/logo.jpg" alt="" title=""  /></a></h1>
+    <div class="top_right">
+              <ul>
+        <li><a href="#">Contact</a></li>
+        <li>
+        	<select name="websites1" id="websites1">
+            	<option>Country Selector</option>
+				<option>USA</option>
+ 				<option>UK</option>
+ 				<option>Canada</option>
+			</select>
+</li>
+      </ul>
+            </div>
+    <div class="width80">
+              <div class="search_part">
+        <div class="search_icon"> <a href="#"><img src="images/search_icon.jpg" alt="" title=""  /> </a></div>
+        <input name="" type="text" class="field" />
+      </div>
+              <!--<nav>
+        <ul>
+                  <li><a href="#">Solutions</a></li>
+                  <li><a href="#">industries</a></li>
+                  <li><a href="#">knowledge</a></li>
+                </ul>
+      </nav>-->
+      
+      <!-- menu starts here -->
+      <select name="" class="main_menu">
+      	<option value="#">Solutions</option>
+        <option value="#">industries</option>
+        <option value="#">knowledge</option>
+      </select>
+      
+      <div class="dcjq-mega-menu">
+        		<ul id="mega-menu-tut" class="menu">
+                  <li class="solution"><a href="#">SOLUTIONS</a>
+                    <ul class="main_bg">
+                      	<li id="menu-item-1">
+               				 <ul>
+                          		<li><a href="#">Foot traffic</a></li>
+                         		 <li><a href="#">Targeted awareness</a></li>
+                          		<li><a href="#">product launches</a></li>
+                        	</ul>
+             		</li>
+                      <li id="menu-item-2">
+                <ul>
+                          <li><a href="#">STORE OPENINGS</a></li>
+                          <li><a href="#">EVENT PROMOTIONS</a></li>
+                        </ul>
+              </li>
+                      <li id="menu-item-3">
+                <ul>
+                          <li><a href="#"><img src="images/menu_item1.jpg" height="200" width="137" alt="" title=""  /></a></li>
+                        </ul>
+              </li>
+                      <li id="menu-item-4">
+                <ul>
+                          <li><a href="#">SUCCESS STORIES</a></li>
+                          <li>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vesti bulum sed odio mi.</p>
+                  </li>
+                        </ul>
+              </li>
+                    </ul>
+                  </li>
+                  <li><a href="#">INDUSTRIES</a>
+            		  <ul class="main_bg">
+                      	<li id="menu-item-1">
+               				 <ul>
+                          		<li><a href="#">Retail</a></li>
+                         		 <li><a href="#">Consumer Products</a></li>
+                          		<li><a href="#">Automotive</a></li>
+                        	</ul>
+             		</li>
+                      <li id="menu-item-2">
+                <ul>
+                          <li><a href="#">Restaurants</a></li>
+                          <li><a href="#">Health Care</a></li>
+                          <li><a href="#">Entertainment </a></li>
+                        </ul>
+              </li>
+                      <li id="menu-item-3">
+                <ul>
+                          <li><a href="#"><img src="images/menu_item1.jpg" height="200" width="137" alt="" title=""  /></a></li>
+                        </ul>
+              </li>
+                      <li id="menu-item-4">
+                <ul>
+                          <li><a href="#">SUCCESS STORIES</a></li>
+                          <li>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vesti bulum sed odio mi.</p>
+                  </li>
+                        </ul>
+              </li>
+                    </ul>
+          		   </li>
+                  <li><a href="#">KNOWLEDGE</a></li>
+                </ul>
+      </div>
+    
+    <!-- menu close here -->
+      
+            </div>
+  </header>
+          <div class="clear"></div>
+        </div>
+</div>
+<div class="online_bg">FOOT TRAFFIC</div>
+<div class="noslider">
+        	<div class="nortext"><span class="middle-txt">From Screen to Store</span></div>
+        </div>
+<div class="alllogo_bg pdtop68"><h3>MAXPOINT IN ACTION</h3></div>
+<div class="help_part">
+			<div class = 'sliderContainer'>
+              <div class = 'iosSlider'>
+        		<div class = 'slider'>
+            		<div class = 'item'>
+                		<div class = 'inner'>
+                    <div class = 'text2'>
+                    	<div class="left"><img src="images/inner-slider1.jpg"  alt="Advertiser" title="Advertiser"></div>
+                        <div class="right">
+                        <h4>ADVERTISER:</h4>
+                        <span>A national grocery store chain</span>
+                        <h4>OBJECTIVE:</h4>
+                        <span>Pull shoppers away from its competition</span>
+                        <a href="#" class="see-link">See how we would help</a>
+                        </div>
+                    </div>
+                </div>
+           			 </div>
+                    <div class = 'item'>
+                		<div class = 'inner'>
+                            <div class = 'text2'>
+                            <div class="left"><img src="images/inner-slider2.jpg"  alt="Proprietary" title="Proprietary"></div>
+                            <div class="right">
+                            <p>MaxPoint would use its proprietary interest data to locate the Digital Zips® around the chain's stores where shoppers are likely to switch from the competition.</p>
+                            </div>
+                            </div>
+                </div>
+           			 </div>
+                    <div class = 'item'>
+                		<div class = 'inner'>
+                            <div class = 'text2'>
+                            <div class="left"><img src="images/inner-slider3.jpg"  alt="Deliver Digital Display" title="Deliver Digital Display"></div>
+                            <div class="right">
+                            <p>We would deliver digital display, video, and mobile ads on brand-safe sites to shoppers in the selected Digital Zips. </p>
+                            </div>
+                            </div>
+                </div>
+           			 </div>
+                    <div class = 'item'>
+                		<div class = 'inner'>
+                			
+                            <div class = 'text2'>
+                            <div class="left"><img src="images/inner-slider4.jpg" alt="Sophisticated Technology" title="Sophisticated Technology"></div>
+                            <div class="right">
+                            <p>Our sophisticated technology would monitor the campaign around the clock for optimal responses, landing page interactions, and responder profiles. </p>
+                            </div>
+                            </div>
+                </div>
+           			 </div>
+                    <div class = 'item'>
+                		<div class = 'inner'>
+                			
+                            <div class = 'text2'>
+                            <div class="left"><img src="images/inner-slider5.jpg" alt="Detailed analytics on campaign performance" title="Detailed analytics on campaign performance"></div>
+                            <div class="right">
+                            <p>MaxPoint would provide detailed analytics on campaign performance, including response rates, landing page view rates, website interaction rates, and audience profiles. </p>
+                            </div>
+                            </div>
+                </div>
+           			 </div>
+                    <div class = 'item'>
+                		<div class = 'inner'>
+                			
+                            <div class = 'text2'>
+                            <div class="left"><img src="images/inner-slider6.jpg" alt="Right strategy to reach your goals" title="Right strategy to reach your goals"></div>
+                            <div class="right">
+                            <p class="paddingtop40">
+                            <span>Of course, every campaign is unique. MaxPoint can help you find the right strategy to reach your goals.</span>
+                            <a href="#" class="see-link">Contact us to learn more.</a>
+                            </p>
+                            </div>
+                            </div>
+                </div>
+           			 </div>
+                </div>
+      		  </div>
+      			<div class = 'slideSelectors'>
+					<div class = 'item selected'></div>
+					<div class = 'item'></div>
+					<div class = 'item'></div>
+                    <div class = 'item'></div>
+                    <div class = 'item'></div>
+                    <div class = 'item'></div>
+				</div>
+              <div class = 'scrollbarContainer'></div>
+            </div>
+        </div>
+<div class="content_bg">
+          <div class="wrapper">
+    		<div class="content">
+    			<div class="middle-share">
+       	 <div class="social-section">
+            <div class="my-media">
+                <span>Share</span>
+                <ul class="media">
+                    <li><a class="fblink" href="#"></a></li>
+                    <li><a class="linlink" href="#"></a></li>
+                    <li><a class="twtlink" href="#"></a></li>
+                    <li><a class="maillinks" href="#"></a></li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    	        <h5>HOW WE CAN HELP</h5>
+                <p class="help_text">MaxPoint's proprietary Digital Zip® technology helps advertisers boost foot traffic by targeting the right neighborhoods. We can help you:</p>
+                <div class="content_inner">
+                    <div class="seazernew_icon">Promote new products by offering discounts and incentives.</div>
+                    <div class="home_icon">Use purchase data and our proprietary interest data to find the digital zips that over-index for your ideal shoppers.</div>
+                    <div class="pull_icon">Pull customers from your competition by targeting the right shoppers using pre-roll video before their online tv shows.</div>
+                    <div class="mob_icon">Run hyperlocal mobile campaigns to reach the right shoppers when they're checking their phones.</div>
+                    <div class="seaser">Deliver seasonal promotions at the peak times for capitalizing on big holidays and events.</div>        
+                </div>
+            </div>
+    <div class="clear"></div>
+  </div>
+        </div>
+<div class="white_bg mr-1">
+          <div class="wrapper">
+    <div class="sucess_stories"> <img src="images/piza.jpg" alt="" title=""  />
+              <div class="sucess_right">
+        <p>SUCCESS STORY
+         <span>Learn how Naked Pizza increased sales by 19% at one of its New Jerseylocations.</span> </p>
+        <input name="" type="button" class="button" value="READ THE FULL STORY" />
+      </div>
+            </div>
+    <div class="clear"></div>
+  </div>
+        </div>
+<div class="graybg">
+        	YOU MAY ALSO BE INTERESTED IN:
+        </div>
+<div class="content_bg">
+        <div class="wrapper">
+        <div class="solution_part effect-container">
+              <ul class="interested-item">
+        <li>
+        	<img class="img-style row5" src="images/trafic1.jpg" alt="" title=""  />
+                  <h6 class="mr-122">HOW MAXPOINT DRIVES TARGETED AWARENESS</h6>
+                  <span class="linkpart"><a href="#">LEARN MORE</a></span>
+                </li>
+        <li><img class="img-style row4" src="images/trafic2.jpg" alt="" title=""  />
+                  <h6 class="mr-122">101 NEW RULES FOR RETAIL</h6>
+                  <span class="linkpart"><a href="#">LEARN MORE</a></span>
+                </li>
+        <li><img class="img-style row3" src="images/trafic3.jpg" alt="" title=""  />
+                  <h6 class="mr-122">HOw we work</h6>
+                  <span class="linkpart"><a href="#">LEARN MORE</a></span>
+                </li>
+      </ul>
+            </div>
+        <div class="clear"></div>
+        </div>
+        </div>
+<div class="bottom_contact">
+          <div class="wrapper">
+    <div class="see_work">SEE HOW MAXPOINT CAN WORK FOR YOU. <strong>CONTACT US</strong>.</div> 
+    <div class="clear"></div>
+  </div>
+        </div>
+<div class="footer_bg">
+          <div class="wrapper">
+    <div class="subcribe_part">
+              <div class="width_subcribe">
+        <h3>SUBSCRIBE<span>Get the latest hyperlocal tips and tricks delivered to your inbox.</span></h3>
+      </div>
+              <div class="width20">
+        <input name="" type="text" class="email" value="Enter your email here" />
+        <input name="" type="button" class="button submit" value="submit" />
+      </div>
+              <div class="social_part"> <a href="#"><img src="images/fb.png" alt="" title=""  /></a> <a href="#"><img src="images/twitt.png" alt="" title=""  /></a> <a href="#"><img src="images/in.png" alt="" title=""  /></a> <a href="#"><img src="images/youtube.png" alt="" title=""  /></a> </div>
+            </div>
+            
+            <div class="search_part footer-search">
+                    <div class="search_icon"> <a href="#"><img src="images/search_icon.jpg" alt="" title=""  /> </a></div>
+                    <input name="" type="text" class="field" />
+                </div>
+    <div id="footer_links">
+              <div class="col-1">
+        <h2>Navigate</h2>
+        <ul>
+                  <li><a href="#">Solutions</a></li>
+                  <li><a href="#">Industries</a></li>
+                  <li><a href="#">Knowledge</a></li>
+                </ul>
+      </div>
+              <div class="col-2">
+        <h2>ABOUT MAXPOINT</h2>
+        <ul>
+                  <li><a href="#">Overview</a></li>
+                  <li><a href="#">Working at MaxPoint</a></li>
+                  <li><a href="#">Events</a></li>
+                  <li><a href="#">Contact</a></li>
+                  <li><a href="#">Privacy</a></li>
+                </ul>
+      </div>
+              <div class="col-3">
+        <h2>Media</h2>
+        <ul>
+                  <li><a href="#">Follow MaxPoint in the news.</a></li>
+                </ul>
+        <h2 class="mrtop10"><a href="#">SEE More</a></h2>
+      </div>
+              <div class="col-4">
+        <h2>blog</h2>
+        <p>Drive your hyperlocal advertising results even higher with tips from our OnPoint blog.</p>
+        <h2><a href="#">Read More</a></h2>
+      </div>
+              <div class="copyright">&copy; 2013 MaxPoint</div>
+            </div>
+    <div class="clear"></div>
+  </div>
+        </div>
+</body>
+</html>

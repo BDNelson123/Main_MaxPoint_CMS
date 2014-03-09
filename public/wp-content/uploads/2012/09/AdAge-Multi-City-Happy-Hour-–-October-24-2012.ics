@@ -1,0 +1,40 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Apple Inc.//iCal 5.0.3//EN
+CALSCALE:GREGORIAN
+BEGIN:VTIMEZONE
+TZID:America/New_York
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+DTSTART:20070311T020000
+TZNAME:EDT
+TZOFFSETTO:-0400
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+DTSTART:20071104T020000
+TZNAME:EST
+TZOFFSETTO:-0500
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+CREATED:20120918T204245Z
+UID:28BDABF1-EE5A-4058-AD77-ADA284D1FD7B
+DTEND;TZID=America/New_York:20121024T203000
+TRANSP:OPAQUE
+SUMMARY:AdAge Multi-City Happy Hour – October 24\, 2012
+DTSTART;TZID=America/New_York:20121024T180000
+DTSTAMP:20120928T134319Z
+LOCATION:Bentonville\, Chicago\, Los Angeles\, Miami\, New York\, and Sa
+ n Francisco
+SEQUENCE:15
+DESCRIPTION:We’re teaming up with Advertising Age for its multi-city hap
+ py hour event! Join us on October 24 in one of six cities across the Uni
+ ted States (Bentonville\, Chicago\, Los Angeles\, Miami\, New York\, and
+  San Francisco) to mix and mingle with fellow advertising\, marketing\, 
+ and media professionals. There is no cost to attend this great networkin
+ g event.\n\nhttp://events.adage.com/happyhour/
+END:VEVENT
+END:VCALENDAR

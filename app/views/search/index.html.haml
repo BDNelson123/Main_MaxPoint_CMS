@@ -1,0 +1,22 @@
+.online_bg
+.content_bg
+  .wrapper
+    .content
+      .normal-page
+        %h1.large Search Results
+        %span.result-info
+          The following #{pluralize(@pages.size, 'item matches', 'items match')}
+          %strong= params[:term]
+        - @pages.each do |page|
+          .search-result-box
+            %h3= page.title
+            %p= snippet_for(page, params[:term])
+            = link_to "Read full page", page.locality_path, class: 'read-more'
+    .clear
+.bottom_contact
+  .wrapper
+    .see_work
+      SEE HOW MAXPOINT CAN WORK FOR YOU.
+      %strong CONTACT US
+      \.
+    .clear

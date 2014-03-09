@@ -1,0 +1,40 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Apple Inc.//iCal 5.0.3//EN
+CALSCALE:GREGORIAN
+BEGIN:VTIMEZONE
+TZID:America/New_York
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+DTSTART:20070311T020000
+TZNAME:EDT
+TZOFFSETTO:-0400
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+DTSTART:20071104T020000
+TZNAME:EST
+TZOFFSETTO:-0500
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+TRANSP:OPAQUE
+DTEND;TZID=America/New_York:20120918T140000
+UID:E2C83D25-CDBA-4BF5-AEE2-E796578D1AB3
+DTSTAMP:20120727T190319Z
+LOCATION:Byron's South End - Charlotte\, NC
+DESCRIPTION:Secure your tickets now for the Southeast’s first annual sho
+ pper marketing event. Join MaxPoint Interactive\, retailers\, manufactur
+ ers\, and service providers in Charlotte\, North Carolina\, for a discus
+ sion about loyalty in the digital age. Network with your peers\, enjoy l
+ unch\, and see best-in-class examples of how brands are connecting with 
+ shoppers in the ever-evolving retail landscape.
+URL;VALUE=URI:http://attendrise.eventbrite.com/
+SEQUENCE:8
+SUMMARY:RISE Loyalty in the Digital Age – September 18\, 2012
+DTSTART;TZID=America/New_York:20120918T110000
+CREATED:20120727T190019Z
+END:VEVENT
+END:VCALENDAR

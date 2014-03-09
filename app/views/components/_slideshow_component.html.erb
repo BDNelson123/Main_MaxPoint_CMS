@@ -1,0 +1,19 @@
+<div class="slider slider_part nomrg">
+    <div class="fluidHeight home <%= component.caption_style == 'rectangle' ? '' : 'square' %>">
+        <div class="sliderContainer">
+            <div class="iosSlider">
+                <div class="slider">
+                    <% components.each do |component| %>
+                        <%= render_component component %>
+                    <% end %>
+                </div>
+            </div>
+            <div class = 'slideSelectors inside-home'>
+                <% components.length.times do |index| %>
+                    <div class = "item <%= index == 0 ? 'selected' : '' %>"></div>
+                <% end %>
+            </div>
+            <div class = 'scrollbarContainer'></div>
+        </div>
+    </div>
+</div>

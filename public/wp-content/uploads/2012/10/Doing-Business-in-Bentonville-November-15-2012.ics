@@ -1,0 +1,39 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Apple Inc.//iCal 5.0.3//EN
+CALSCALE:GREGORIAN
+BEGIN:VTIMEZONE
+TZID:America/New_York
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+DTSTART:20070311T020000
+TZNAME:EDT
+TZOFFSETTO:-0400
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+DTSTART:20071104T020000
+TZNAME:EST
+TZOFFSETTO:-0500
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+CREATED:20121010T135455Z
+UID:8E88F775-9221-4709-AE5E-A94C47C95265
+DTEND;TZID=America/New_York:20121115T093000
+TRANSP:OPAQUE
+SUMMARY:Doing Business in Bentonville - November 15\, 2012
+DTSTART;TZID=America/New_York:20121115T070000
+DTSTAMP:20121010T135655Z
+LOCATION:Rogers\, Arkansas
+SEQUENCE:12
+DESCRIPTION:MaxPoint will head to Rogers\, Arkansas\, on November 15 for
+  Doing Business in Bentonville. As we approach the end of the year\, ref
+ lect on the changing retail landscape and what’s in store for retailers 
+ as they look for ways to improve decision-making\, operations\, and stra
+ tegies. Breakfast begins at 7:00 am.\n\nwww.doingbusinessinbentonville.c
+ om
+END:VEVENT
+END:VCALENDAR

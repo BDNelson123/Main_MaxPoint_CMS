@@ -1,0 +1,21 @@
+<div class="content_bg pdtop55">
+    <div class="wrapper">
+        <div class="content">
+            <% if component.title.present? %>
+            <h5><%= component.title %></h5>
+            <% end %>
+            <% if component.header_text.present? %>
+            <div class="content-top rich-text"><%= component.header_text %></div>
+            <% end %>
+            <div class="content_inner">
+                <% components.each do |component| %>
+                    <%= render_component component %>
+                <% end %>
+                <% if component.footer_text.present? %>
+                <div class="bottom76 color_black rich-text"><%= component.footer_text %></div>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</div>
+
