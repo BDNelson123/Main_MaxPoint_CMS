@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
 
-gem 'vasari-cms', require: 'cms', :git => 'https://github.com/BDNelson123/Gem_MaxPoint_CMS.git'
+#gem 'vasari-cms', require: 'cms', :git => 'https://github.com/BDNelson123/Gem_MaxPoint_CMS.git'
 gem 'ckeditor'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
