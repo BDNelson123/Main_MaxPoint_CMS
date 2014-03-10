@@ -1,0 +1,116 @@
+<div class="top-streep">
+  <div class="wrapper">
+
+    <% navigation :home do |home| %>
+      <header>
+        <div class="top_right">
+          <ul>
+            <% navigation :contact do |contact| %>
+              <li><a href="<%= contact.locality_location %>"><%= contact.text %></a></li>
+            <% end %>
+            <% if false %>
+            <li>
+              <select name="websites1" id="websites1">
+                <option>Country Selector</option>
+                <% localities.each do |locality| %>
+                  <option><%= locality.name %></option>
+                <% end %>
+              </select>
+            </li>
+            <% end %>
+            <% navigation :login do |login| %>
+              <li><a href="<%= login.locality_location %>"><%= login.text %></a></li>
+            <% end %>
+          </ul>
+        </div>
+
+        <div class="logo-nav">
+          <h1 id="logo">
+            <a href="<%= home.locality_location %>">
+              <img src="/images/logo.jpg" alt="<%= home.alt %>"/>
+            </a>
+          </h1>
+
+          <a class="toggle-mobile-accordion toggle-mobile-accordion-button" href="#">
+            <img src="/images/mobile-menu-bg.jpg">
+          </a>
+
+          <div class="mobile-menu-accordion">
+            <ul>
+                <% home.links.each do |link| %>
+                  <li class="<%= link.name %>">
+                    <a class="toggle-mobile-accordion" href="#">
+                      <%= link.text %>
+                    </a>
+                    <div style="display: none">
+                      <ul>
+                        <li><a href="<%= link.locality_location %>"><%= link.text %></a></li>
+                        <% link.links.each do |link| %>
+                          <li><a href="<%= link.locality_location %>"><%= link.text %></a></li>
+                        <% end %>
+                      </ul>
+                    </div>
+                  </li>
+                <% end %>
+            </ul>
+          </div>
+
+            <div class="dcjq-mega-menu">
+              <ul id="mega-menu-tut" class="menu">
+                <% home.links.each do |link| %>
+                  <li class="<%= link.name %>"><a href="<%= link.locality_location %>"><%= link.text %></a>
+                    <ul class="main_bg">
+                        <li id="menu-item-1">
+                        <ul>
+                            <li class="top-level-link"><a href="<%= link.locality_location %>"><%= link.text %></a></li>
+                            <% link.links.position(1..3).each do |link| %>
+                                <li><a href="<%= link.locality_location %>"><%= link.text %></a></li>
+                            <% end %>
+                        </ul>
+                        </li>
+                        <li id="menu-item-2">
+                        <ul>
+                            <% link.links.position(4..6).each do |link| %>
+                                <li><a href="<%= link.locality_location %>"><%= link.text %></a></li>
+                            <% end %>
+                        </ul>
+                        </li>
+                        <li id="menu-item-3">
+                        <ul>
+                            <li><img src="/images/menu_item1.jpg" height="200" width="137" alt="" title=""/></a></li>
+                    </ul>
+                    </li>
+                    <li id="menu-item-4">
+                    <ul>
+                        <% link.links.position(7).each do |link| %>
+                          <li>
+                            <a href="<%= link.locality_location %>">
+                              <%= link.text %>  
+                            </a>
+                          </li>
+                          <li>
+                            <p><%= link.summary rescue "" %></p>
+                          </li>
+                        <% end %>
+                    </ul>
+                    </li>
+                </ul>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+        <div class="search_part">
+          <div class="search_icon">
+            <a href="#">
+              <img src="/images/search_icon.jpg"/>
+            </a>
+          </div>
+          <%= form_tag "/search", method: :get do %>
+            <%= text_field_tag "term", params[:term], class: 'field' %>
+          <% end %>
+        </div>
+      </header>
+    <% end %>
+    <div class="clear"></div>
+  </div>
+</div>
