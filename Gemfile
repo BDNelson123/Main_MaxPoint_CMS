@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
+ruby '1.9.3'
 
 gem 'vasari-cms', require: 'cms', :git => 'https://github.com/BDNelson123/Gem_MaxPoint_CMS.git'
 gem 'ckeditor'
