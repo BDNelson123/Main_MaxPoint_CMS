@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-ruby '2.0.0'
 gem 'rails', '3.2.13'
 
 gem 'vasari-cms', require: 'cms', :git => 'https://github.com/BDNelson123/Gem_MaxPoint_CMS.git'
@@ -8,6 +7,7 @@ gem 'ckeditor'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'strong_parameters'
+gem 'rails_12factor'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
