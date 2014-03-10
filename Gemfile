@@ -8,6 +8,7 @@ gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'unicorn'
 gem 'strong_parameters'
+gem 'pg'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
