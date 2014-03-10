@@ -19,12 +19,12 @@ test:
 staging:
   adapter: postgresql
   encoding: unicode
-  database: ddsa462kr97bhu
-  host: ec2-54-204-35-114.compute-1.amazonaws.com
+  database: d9shs2oho1rgn1
+  host: ec2-54-204-2-217.compute-1.amazonaws.com
   port: 5432
   pool: 5
-  username: rqhthlezglxwsd
-  password: M9UV4VgsN-cGfjviSUPLhVa8F1
+  username: ocvehxyuzszmwk
+  password: LBXi3vGj3zsJpo38nGZJn_y6EN
 
 production:
   adapter: postgresql
