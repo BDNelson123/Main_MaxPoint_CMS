@@ -24,14 +24,15 @@
         document.createElement('ng-view');
       </script>
     <![endif]-->
-</head>
-<body onload="resizePage();">
-  <%= render "layouts/header" %>
+  </head>
 
-  <div id="container">
-    <%= yield %>
-  </div>
+  <body onload="resizePage();">
+    <%= render "layouts/header" %>
 
-  <%= render "layouts/footer" %>
-</body>
+    <div id="container">
+      <%= yield %>
+    </div>
+
+    <%= render "layouts/header" %>
+  </body>
 </html>

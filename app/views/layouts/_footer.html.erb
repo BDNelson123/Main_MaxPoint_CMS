@@ -61,10 +61,18 @@
         </script>
       </div>
       <div class="social_part">
-        <a href="https://www.facebook.com/pages/MaxPoint-Interactive/275921092465603"><img src="/images/fb.png" alt="" title=""  /></a>
-        <a href="https://twitter.com/maxpoint_int"><img src="/images/twitt.png" alt="" title=""  /></a>
-        <a href="http://www.linkedin.com/company/maxpoint"><img src="/images/in.png" alt="" title=""  /></a>
-        <a href="http://www.youtube.com/maxpointinteractive"><img src="/images/youtube.png" alt="" title=""  /></a>
+        <a href="https://www.facebook.com/pages/MaxPoint-Interactive/275921092465603">
+          <img src="/images/fb.png" alt="" title=""  />
+        </a>
+        <a href="https://twitter.com/maxpoint_int">
+          <img src="/images/twitt.png" alt="" title=""  />
+        </a>
+        <a href="http://www.linkedin.com/company/maxpoint">
+          <img src="/images/in.png" alt="" title="" />
+        </a>
+        <a href="http://www.youtube.com/maxpointinteractive">
+          <img src="/images/youtube.png" alt="" title=""  />
+        </a>
       </div>
     </div>
 
@@ -84,7 +92,11 @@
         <% navigation :home do |home| %>
           <ul>
             <% home.links.each do |link| %>
-              <li><a href="<%= link.locality_location %>"><%= link.text %></a></li>
+              <li>
+                <a href="<%= link.locality_location %>">
+                  <%= link.text %>
+                </a>
+              </li>
             <% end %>
           </ul>
         <% end %>
@@ -93,7 +105,11 @@
         <h2>ABOUT MAXPOINT</h2>
         <% navigation(:about).links.each do |link| %>
           <ul>
-            <li><a href="<%= link.locality_location %>"><%= link.text %></a></li>
+            <li>
+              <a href="<%= link.locality_location %>">
+                <%= link.text %>
+              </a>
+            </li>
           </ul>
         <% end %>
       </div>
@@ -101,18 +117,32 @@
         <h2>Media</h2>
         <ul>
           <% navigation :news do |link| %>
-            <li><a href="<%= link.locality_location %>"><%= link.text %></a></li>
+            <li>
+              <a href="<%= link.locality_location %>">
+                <%= link.text %>
+              </a>
+            </li>
           <% end %>
         </ul>
         <% navigation :media do |link| %>
-          <h2 class="mrtop10"><a href="<%= link.locality_location %>"><%= link.text %></a></h2>
+          <h2 class="mrtop10">
+            <a href="<%= link.locality_location %>">
+              <%= link.text %>
+            </a>
+          </h2>
         <% end %>
       </div>
       <div class="col-4">
         <h2>blog</h2>
-        <p>Drive your hyperlocal advertising results even higher with tips from our OnPoint Blog.</p>
+        <p>
+          Drive your hyperlocal advertising results even higher with tips from our OnPoint Blog.
+        </p>
         <% navigation :blog do |link| %>
-          <h2><a href="<%= link.locality_location %>"><%= link.text %></a></h2>
+          <h2>
+            <a href="<%= link.locality_location %>">
+              <%= link.text %>
+            </a>
+          </h2>
         <% end %>
       </div>
       <div class="copyright">&copy; 2013 MaxPoint Interactive, Inc.</div>
