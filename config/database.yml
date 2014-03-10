@@ -29,7 +29,9 @@ staging:
 production:
   adapter: postgresql
   encoding: unicode
-  database: maxpoint2_production
+  database: d9shs2oho1rgn1
+  host: ec2-54-204-2-217.compute-1.amazonaws.com
+  port: 5432
   pool: 5
-  username: bnelson
-  password: EDSW94edsw
+  username: ocvehxyuzszmwk
+  password: LBXi3vGj3zsJpo38nGZJn_y6EN
