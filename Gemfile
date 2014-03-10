@@ -7,7 +7,6 @@ gem 'ckeditor'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'strong_parameters'
-gem 'pg'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -20,10 +19,16 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'pry'
+  gem 'pg'
 end
 
 group :production do
   gem 'rails_12factor'
+  gem 'pg'
+end
+
+group :test do
+  gem 'pg'
 end
 
 ruby '2.0.0'
