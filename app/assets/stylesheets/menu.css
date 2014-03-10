@@ -1,0 +1,229 @@
+/* Reset code to remove theme inherent styling */
+.dcjq-mega-menu ul.menu ul, .dcjq-mega-menu ul.menu li {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+@font-face {
+    font-family: 'montserratbold';
+    src: url(/font/montserrat-bold-webfont.eot);
+    src: url(/font/montserrat-bold-webfont.eot?#iefix) format('embedded-opentype'),
+         url(/font/montserrat-bold-webfont.woff) format('woff'),
+         url(/font/fonts/montserrat-bold-webfont.ttf) format('truetype'),
+         url(/font/fonts/montserrat-bold-webfont.svg#montserratbold) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.dcjq-mega-menu ul.menu ul {
+display: none; /* Hides non-mega links */
+}
+.dcjq-mega-menu ul.menu .sub ul {
+display: block; /* overrides above hide */
+}
+
+/* Main menu styles */
+.dcjq-mega-menu ul.menu {
+position: relative;
+margin:21px 0 0 80px;
+float:right;
+width:452px;
+font: 14px 'montserratbold';
+color: #81898F;
+line-height: 16px;
+z-index:10000;
+}
+.dcjq-mega-menu ul.menu li {
+float: left; width:134px;
+font: 14px 'montserratbold';color: #81898F;
+line-height: 16px; background:url(/images/menu_devider.jpg) no-repeat right center;  padding: 0 6px 0 6px;
+}
+.dcjq-mega-menu ul.menu li a {
+
+	background:url(/images/right_arrow.png) no-repeat 90% center;
+    float: left;
+    font: 14px 'montserratbold';color: #81898F;
+    /*padding-left:14px; padding-right:30px;
+	padding-bottom:8px;padding-top:8px;*/
+	padding: 8px 40px 8px 9px;
+    text-decoration: none;
+	text-transform:uppercase;
+
+display: block;
+/*background: url(images/bg_black.png) repeat-x 100% 0;
+*/
+}
+.dcjq-mega-menu ul.menu li.mega-hover a, .dcjq-mega-menu ul.menu li a:hover {
+font: 14px 'montserratbold';color: #ff9605; text-decoration:none;
+background:url(/images/down_arrow.png) no-repeat 90% center; background-color:#606060;
+
+}
+
+/* Arrow tag for parent links */
+.dcjq-mega-menu ul.menu li a.dc-mega {
+/*padding-right: 38px; Additional padding for arrow */
+position: relative; /* Required for arrow positioning */
+}
+.dcjq-mega-menu ul.menu li a .dc-mega-icon {
+display: block;
+position: absolute;
+top: 18px;
+right: 15px;
+width: 8px;
+height: 6px;
+background: url(/images/arrow.png) no-repeat 0 0;
+}
+.dcjq-mega-menu ul.menu li.mega-hover a .dc-mega-icon {
+background-position: 0 100%;
+}
+
+/* Mega Menu Styling */
+/* Mega Drop Down Container */
+.dcjq-mega-menu ul.menu li .sub-container {
+	/*background:url(../images/inner_dropbg.png) repeat-x; width:100%;
+    padding-left: 3px;/*left: -450px !important;left: -116% !important;
+    position: absolute;top: 50px !important;
+   	width: 1346px;*/
+    background: url("/images/inner_dropbg.png") repeat-x scroll 0 0 transparent;
+    float: left;
+    left: -709px;
+    /*position: relative;*/
+	position:absolute;
+    top: 32px !important;
+    width: 1352px;
+   }
+.dcjq-mega-menu ul.menu li .sub {
+/*background: url(images/bg_sub.png) no-repeat 100% 100%; */
+padding: 20px 20px 20px 10px;
+}
+.dcjq-mega-menu ul.menu li .sub-container.mega .sub {
+   margin:0px 0;
+    padding: 0; /*display:block !important;*/
+}
+.dcjq-mega-menu ul.menu li .sub .row { /* Clear the sub-menu floats */
+/*width: 100% !important;
+overflow: hidden;
+clear: both;*/  clear: both;
+    margin-left: 18%;
+    overflow: hidden;
+    width: 82% !important;
+}
+.dcjq-mega-menu ul.menu li .sub li {
+float: none;
+font-size: 1em;
+font-weight: bold;
+width:100%;
+}
+/* Sub-menu Headers */
+.dcjq-mega-menu ul.menu li .sub li.mega-hdr { /* Sub-menu headers - i.e. 2nd level navigation */
+float: left; /* Float the sub-menus and give them a fixed width to from the mega menu rows */
+width:25%;
+padding:0px 0px; height: auto !important;
+}
+
+@media only screen and (min-width: 1201px) {
+    .dcjq-mega-menu ul.menu li .sub li.mega-hdr:last-child {
+        margin-left: -40px;
+    }
+}
+
+.dcjq-mega-menu ul.menu li .sub a { /* Clear the styles from the top-level links and set the font styles */
+background: none;
+border: none;
+text-shadow: none;
+color: #111;
+padding:0px 0px;
+display: block;
+float: none;
+text-decoration: none;
+font-size: 0.9em;
+}
+.dcjq-mega-menu ul.menu li .sub li.mega-hdr a.mega-hdr-a {
+padding: 7px 10px;
+margin-bottom: 5px;
+text-transform: uppercase;
+font-weight: bold;
+color: #000;
+/*background: #EAEAEA url(images/bg_hdr.png) repeat-x center center;
+*/}
+.dcjq-mega-menu ul.menu li .sub li.mega-hdr a.mega-hdr-a:hover {
+color: #000;
+text-shadow: none;
+}
+
+
+/* Add the individual sub-menu backgrounds */
+/*.dcjq-mega-menu ul.menu li .sub li#menu-item-1 {
+background: url(images/bg_coupe.jpg) no-repeat 135px 40px;
+}
+.dcjq-mega-menu ul.menu li .sub li#menu-item-2 {
+background: url(images/bg_sedan.jpg) no-repeat 135px 40px;
+}
+.dcjq-mega-menu ul.menu li .sub li#menu-item-3 {
+background: url(images/bg_convert.jpg) no-repeat 135px 40px;
+}
+.dcjq-mega-menu ul.menu li .sub li#menu-item-4 {
+background: url(images/bg_suv.jpg) no-repeat 135px 40px;
+}
+.dcjq-mega-menu ul.menu li .sub li#menu-item-5 {
+background: url(images/bg_pickup.jpg) no-repeat 135px 40px;
+}
+.dcjq-mega-menu ul.menu li .sub li#menu-item-6 {
+background: url(images/bg_sports.jpg) no-repeat 135px 40px;
+}
+*/
+/* Style the 3rd level links */
+.dcjq-mega-menu ul.menu li .sub li ul li {
+/*margin-right: 90px;
+*/}
+.dcjq-mega-menu ul.menu .sub li.mega-hdr li a {
+  color: #fff;
+  text-align:left;
+   font:14px/45px 'montserratbold';
+/*padding: 3px 0 3px 25px;
+background: url(images/bullet.png) no-repeat 10px 8px; */
+}
+.dcjq-mega-menu ul.menu .sub li.mega-hdr li a:hover {
+color: #ff9605;
+/*background-image: url(images/bullet_on.png); */
+}
+
+/* Styling for items with only 2 levels */
+.dcjq-mega-menu ul.menu li .sub-container.non-mega .sub {
+padding: 20px 20px 20px 10px;
+}
+.dcjq-mega-menu ul.menu li .sub-container.non-mega li {
+width: 190px; /* Set the drop down width */
+}
+.dcjq-mega-menu ul.menu li .sub-container.non-mega li a {
+padding: 7px 5px 7px 22px;
+background: url(/images/bullet.png) no-repeat 5px 12px;
+}
+.dcjq-mega-menu ul.menu li .sub-container.non-mega li a:hover {
+color: #990000;
+background-image: url(/images/bullet_on.png);
+}
+/*#menu-item-3 { padding-top:13px; }
+#menu-item-1 { padding-top:4px; }
+#menu-item-4 { padding-top:14px; }
+#menu-item-5 { padding-top:14px;  border-right: medium none;}
+*/
+#menu-item-2 { margin-top:15px; }
+#menu-item-1 { margin-top:15px; }
+#menu-item-4 { margin-top:15px; }
+/*#menu-item-3 {width:16% !important; }*/
+
+
+.row li ul li, .row li { background:none !important; }
+.main_bg {background:url(/images/drop_bg.png) no-repeat top center; }
+.row p { color: #FFFFFF;
+	font-family:'proxima_nova_rgregular';
+	font-size:14px;
+	line-height:20px;
+    text-decoration: none;
+}
+
+.menu li.top-level-link {
+    display: none;
+}
