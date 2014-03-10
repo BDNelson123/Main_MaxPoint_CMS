@@ -6,9 +6,7 @@ gem 'vasari-cms', require: 'cms', :git => 'https://github.com/BDNelson123/Gem_Ma
 gem 'ckeditor'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
-gem 'unicorn'
 gem 'strong_parameters'
-gem 'pg'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
