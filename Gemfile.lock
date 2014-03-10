@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/BDNelson123/Gem_MaxPoint_CMS.git
-  revision: c72ffa1c94f1a00e8417203a707b2bee9ff296d3
+  revision: 3f05832a3693c9d86c58a6a249cf0378ddef0727
   specs:
     vasari-cms (0.0.37)
       activerecord-postgres-hstore
@@ -12,7 +12,7 @@ GIT
       haml-rails
       jquery-ui-rails
       kaminari
-      nokogirl
+      nokogiri
       pg
       presents
       rails (~> 3.2.1)
@@ -53,7 +53,7 @@ GEM
     activesupport (3.2.13)
       i18n (= 0.6.1)
       multi_json (~> 1.0)
-    arel (3.0.2)
+    arel (3.0.3)
     bcrypt-ruby (3.0.1)
     better_errors (0.9.0)
       coderay (>= 1.0.0)
@@ -98,7 +98,7 @@ GEM
       thor (>= 0.14, < 2.0)
     jquery-ui-rails (4.1.2)
       railties (>= 3.1.0)
-    json (1.8.0)
+    json (1.8.1)
     kaminari (0.15.1)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
@@ -107,17 +107,15 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     method_source (0.8.1)
-    mime-types (1.23)
+    mime-types (1.25.1)
     mini_portile (0.5.2)
-    multi_json (1.7.7)
+    multi_json (1.9.0)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
-    nokogirl (1.0)
-      nokogiri
     orm_adapter (0.5.0)
     pg (0.17.1)
     pg-hstore (1.2.0)
-    polyglot (0.3.3)
+    polyglot (0.3.4)
     presents (1.0.3)
       rails (> 1.0.0)
     pry (0.9.12.2)
@@ -151,11 +149,12 @@ GEM
       rake (>= 0.8.7)
       rdoc (~> 3.4)
       thor (>= 0.14.6, < 2.0)
-    rake (10.1.0)
+    rake (10.1.1)
     rdoc (3.12.2)
       json (~> 1.4)
     ref (1.0.5)
-    sass (3.2.10)
+    sass (3.3.0)
+      rake
     sass-rails (3.2.6)
       railties (~> 3.2.0)
       sass (>= 3.1.10)
@@ -178,10 +177,10 @@ GEM
       ref
     thor (0.18.1)
     tilt (1.4.1)
-    treetop (1.4.14)
+    treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
-    tzinfo (0.3.37)
+    tzinfo (0.3.39)
     uglifier (2.1.1)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
