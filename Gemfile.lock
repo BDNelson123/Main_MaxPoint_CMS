@@ -1,24 +1,3 @@
-GIT
-  remote: https://github.com/BDNelson123/Gem_MaxPoint_CMS.git
-  revision: 3f05832a3693c9d86c58a6a249cf0378ddef0727
-  specs:
-    vasari-cms (0.0.37)
-      activerecord-postgres-hstore
-      bcrypt-ruby (~> 3.0.0)
-      bootstrap-sass (~> 2.0)
-      bootstrap-wysihtml5-rails
-      ckeditor (~> 4.0.4)
-      dragonfly (~> 0.9.15)
-      haml-rails
-      jquery-ui-rails
-      kaminari
-      nokogiri
-      pg
-      presents
-      rails (~> 3.2.1)
-      select2-rails
-      strong_parameters
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -43,10 +22,6 @@ GEM
       activesupport (= 3.2.13)
       arel (~> 3.0.2)
       tzinfo (~> 0.3.29)
-    activerecord-postgres-hstore (0.7.7)
-      activerecord (>= 3.1)
-      pg-hstore (>= 1.1.5)
-      rake
     activeresource (3.2.13)
       activemodel (= 3.2.13)
       activesupport (= 3.2.13)
@@ -54,20 +29,12 @@ GEM
       i18n (= 0.6.1)
       multi_json (~> 1.0)
     arel (3.0.3)
-    bcrypt-ruby (3.0.1)
     better_errors (0.9.0)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
-    bootstrap-sass (2.3.2.2)
-      sass (~> 3.2)
-    bootstrap-wysihtml5-rails (0.3.1.23)
-      railties (>= 3.0)
     builder (3.0.4)
-    ckeditor (4.0.10)
-      mime-types
-      orm_adapter (~> 0.5.0)
     coderay (1.0.9)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -77,19 +44,9 @@ GEM
       execjs
     coffee-script-source (1.6.2)
     debug_inspector (0.0.2)
-    dragonfly (0.9.15)
-      multi_json (~> 1.0)
-      rack
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
-    haml (4.0.5)
-      tilt
-    haml-rails (0.4)
-      actionpack (>= 3.1, < 4.1)
-      activesupport (>= 3.1, < 4.1)
-      haml (>= 3.1, < 4.1)
-      railties (>= 3.1, < 4.1)
     hike (1.2.3)
     i18n (0.6.1)
     journey (1.0.4)
@@ -99,25 +56,15 @@ GEM
     jquery-ui-rails (4.1.2)
       railties (>= 3.1.0)
     json (1.8.1)
-    kaminari (0.15.1)
-      actionpack (>= 3.0.0)
-      activesupport (>= 3.0.0)
     libv8 (3.11.8.17)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     method_source (0.8.1)
     mime-types (1.25.1)
-    mini_portile (0.5.2)
     multi_json (1.9.0)
-    nokogiri (1.6.1)
-      mini_portile (~> 0.5.0)
-    orm_adapter (0.5.0)
     pg (0.17.1)
-    pg-hstore (1.2.0)
     polyglot (0.3.4)
-    presents (1.0.3)
-      rails (> 1.0.0)
     pry (0.9.12.2)
       coderay (~> 1.0.5)
       method_source (~> 0.8)
@@ -154,8 +101,6 @@ GEM
       json (~> 1.4)
     ref (1.0.5)
     sass (3.2.13)
-    select2-rails (3.5.4)
-      thor (~> 0.14)
     slop (3.4.5)
     sprockets (2.2.2)
       hike (~> 1.2)
@@ -186,7 +131,6 @@ PLATFORMS
 DEPENDENCIES
   better_errors
   binding_of_caller
-  ckeditor
   coffee-rails (~> 3.2.1)
   jquery-rails
   jquery-ui-rails
@@ -198,4 +142,3 @@ DEPENDENCIES
   strong_parameters
   therubyracer
   uglifier (>= 1.0.3)
-  vasari-cms!
