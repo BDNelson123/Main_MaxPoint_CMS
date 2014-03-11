@@ -1,12 +1,19 @@
 MaxPoint's CMS main repository.
 
 Directions to Install:
+
 1.) Clone repository
+
 2.) bundle install to install the visasri-cms gem
+
 3.) Make sure to install Postgres and create hstore extension with:
+
 psql -d DB_NAME -c 'create extension hstore;'
+
 4.) rake cms:install:migrations
+
 5.) rake db:migrate
 
 Notes:
+
 1.) Uses Rails 3.2.15 and Ruby 2.0.0
