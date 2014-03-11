@@ -25,6 +25,7 @@ end
 group :production do
   # This is a Heroku hack gem
   gem 'rails_12factor'
+  gem 'pg'
 end
 
 group :test do
