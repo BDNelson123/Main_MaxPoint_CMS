@@ -9,6 +9,7 @@ gem 'jquery-ui-rails'
 gem 'strong_parameters'
 gem 'pg'
 gem 'deep_cloneable', '~> 1.6.0'
+gem 'unicorn'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
