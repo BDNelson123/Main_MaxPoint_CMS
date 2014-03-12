@@ -10,6 +10,7 @@ gem 'strong_parameters'
 gem 'pg'
 gem 'deep_cloneable', '~> 1.6.0'
 gem 'unicorn'
+gem 'delayed_job'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

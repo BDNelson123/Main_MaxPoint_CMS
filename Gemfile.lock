@@ -79,6 +79,8 @@ GEM
     debug_inspector (0.0.2)
     deep_cloneable (1.6.0)
       activerecord (>= 3.1.0)
+    delayed_job (4.0.0)
+      activesupport (>= 3.0, < 4.1)
     dragonfly (0.9.15)
       multi_json (~> 1.0)
       rack
@@ -201,6 +203,7 @@ DEPENDENCIES
   ckeditor
   coffee-rails (~> 3.2.1)
   deep_cloneable (~> 1.6.0)
+  delayed_job
   jquery-rails
   jquery-ui-rails
   pg
