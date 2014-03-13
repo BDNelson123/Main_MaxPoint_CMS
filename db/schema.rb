@@ -11,7 +11,9 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130709001741) do
+ActiveRecord::Schema.define(:version => 20140313172445) do
+
+  add_extension "hstore"
 
   create_table "ckeditor_assets", :force => true do |t|
     t.string   "data_uid",                     :null => false
@@ -68,6 +70,16 @@ ActiveRecord::Schema.define(:version => 20130709001741) do
     t.datetime "updated_at",          :null => false
   end
 
+  create_table "cms_copies", :force => true do |t|
+    t.string   "category"
+    t.integer  "locality_from"
+    t.integer  "locality_to"
+    t.integer  "id_from"
+    t.integer  "id_to"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
   create_table "cms_links", :force => true do |t|
     t.string   "name"
     t.string   "text"
@@ -104,6 +116,7 @@ ActiveRecord::Schema.define(:version => 20130709001741) do
     t.text     "meta_keywords"
     t.string   "type"
     t.boolean  "published",        :default => true
+    t.integer  "copy",             :default => [],   :null => false, :array => true
   end
 
   create_table "cms_posts", :force => true do |t|
