@@ -10,7 +10,6 @@ gem 'strong_parameters'
 gem 'pg'
 gem 'deep_cloneable', '~> 1.6.0'
 gem 'unicorn'
-gem 'delayed_job'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -26,11 +25,7 @@ group :development do
 end
 
 group :production do
-  # This is a Heroku hack gem
-  gem 'rails_12factor'
 end
 
 group :test do
 end
-
-ruby '2.0.0'
