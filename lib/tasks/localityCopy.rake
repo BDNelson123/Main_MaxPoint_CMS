@@ -9,18 +9,29 @@ namespace :localityCopy do
   desc "Copy US pages to UK pages"
 
   task :copy_pages => :environment do
-    # change this to determine what locality you will transfer to
-    @@fromSlug = 'us'
-    @@toSlug = 'uk'
-
-    # array of the ids for the pages copied
-    @@pagesCopied = []
-
-    # gets slug ID
-    @@fromLocalityID = Cms::Locality.find_by_slug(@@fromSlug).id
-    @@toLocalityID = Cms::Locality.find_by_slug(@@toSlug).id
+    @@fromLocalityID = Cms::Locality.find_by_slug('us').id    # gets from locality ID
+    @@toLocalityID = Cms::Locality.find_by_slug('uk').id      # gets to locality ID   
+    @@copied = []                                             # array of the ids for the pages copied
 
     public
+
+    # select query to get records
+    def query(type,requirement,field=nil)
+      case type
+        when type = 'page'
+          return Cms::Page.where(field => requirement)
+        when type = 'link'
+          return Cms::Link.where(field => requirement)
+        when type = 'component'
+          return Cms::Component.where(field => requirement)
+        when type = 'Page'
+          return Cms::Page.find_by_id(requirement)
+        when type = 'Link'
+          return Cms::Link.find_by_id(requirement)
+        when type = 'Component'
+          return Cms::Component.find_by_id(requirement)
+      end
+    end
 
     # creates log record of copy
     def copyLog(page,clone_page,category)
@@ -32,50 +43,59 @@ namespace :localityCopy do
       copy.id_to = clone_page.id
       copy.save
 
-      # add to array
-      @@pagesCopied << clone_page.id
+      @@copied << clone_page.id # add to array
     end
 
     # insert new parent_id into pages
     def parentID(category)
-      object = Cms::Page.where(:id => @@pagesCopied)
+      object = self.query(category,@@copied,'id')
 
       object.each do |t|
-        if t.parent_id
+        if t.parent_id  # only go back over records that have a parent id
           getID = Cms::Copy.select("id_to").where(:id_from => t.parent_id, :category => category).first
-
-          parent = Cms::Page.find_by_id(t.id)
-          parent.parent_id = getID.id_to
+          parent = self.query(category.capitalize,t.id)
+          if getID  # have to run this because one of the components has a parent_id to a component that doesn't exist
+            parent.parent_id = getID.id_to
+          end
           parent.save
         end
       end
     end
 
-    # clones a page
-    def usPagesNoParent(page)
+    # clones record
+    def cloneRecord(page,type)
       clone_page = page.dup
-      clone_page.locality_id = @@toLocalityID
-      clone_page.save
+      clone_page.locality_id = @@toLocalityID  # makes copied page have new locality
+      clone_page.copy_from = @@fromLocalityID  # makes record of where page was copied from
 
-      self.copyLog(page,clone_page,'page')
+      if type == 'link' || type == 'component'  # this can run here because link && component copies are called after page copies
+        clonePageID = Cms::Copy.select("id_to").where(:id_from => page.page_id, :category => 'page', :locality_from => @@fromLocalityID, :locality_to => @@toLocalityID).first
+        if clonePageID
+          clone_page.page_id = clonePageID.id_to
+        end
+      end
+
+      clone_page.save
+      self.copyLog(page,clone_page,type)
     end
 
     # copy pages
-    def copyPages
-      fromPages = Cms::Page.where(:locality_id => @@fromLocalityID)
+    def copyPages(type)
+      from = self.query(type,@@fromLocalityID,'locality_id')
         
-      fromPages.each do |toPages|
-        if toPages.copy.exclude? @@toLocalityID  # makes sure record can't be copied to same locality twice
-          self.usPagesNoParent(toPages)
-          toPages.copy += [@@toLocalityID]  # makes record that page has been copied
-          toPages.save
+      from.each do |to|
+        if to.copy.exclude? @@toLocalityID  # makes sure record can't be copied to same locality twice
+          self.cloneRecord(to,type)
+          to.copy += [@@toLocalityID] # makes record that page has been copied
+          to.save
         end
       end
+
+      self.parentID(type)
     end
 
-    self.copyPages
-    self.parentID('page')
-    # self.copyLinks
-    # self.copyComponents
+    self.copyPages('page')
+    self.copyPages('link')
+    self.copyPages('component')
   end
 end
